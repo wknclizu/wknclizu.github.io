@@ -103,7 +103,7 @@
 <meta property="og:description" content="取模运算 (a+b) % m = (a % m+b % m) % m  减法同理 (a * b)% = (a%m)*(b%m)%m ​ 这一定理非常重要">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="https://i.loli.net/2019/07/15/5d2c97a5a653c95001.jpg">
-<meta property="og:updated_time" content="2019-07-15T15:13:46.039Z">
+<meta property="og:updated_time" content="2019-07-15T15:34:13.521Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="基础数学">
 <meta name="twitter:description" content="取模运算 (a+b) % m = (a % m+b % m) % m  减法同理 (a * b)% = (a%m)*(b%m)%m ​ 这一定理非常重要">
@@ -508,11 +508,11 @@
 <h3 id="线性筛"><a href="#线性筛" class="headerlink" title="线性筛"></a>线性筛</h3><p>复杂度：$ O(n) $</p>
 <ol>
 <li><p>线性筛中，每个数只会被它最小的质因子筛去<strong>（这也是它的线性复杂度证明的关键）</strong></p>
-<p>比如 若 $ i = 35 = 5 * 7 $</p>
-<p>则通过$ i$筛去的质数是 $2<em>i,3</em>i,5*i$ </p>
-<p>即 $ 2<em>5</em>7 = 70$</p>
-<p>​    $ 3<em>5</em>7 = 105$</p>
-<p>​    $5<em>5</em>5 = 175 $</p>
+<p>比如 若 $ i = 35 = 5 \times 7 $</p>
+<p>则通过$ i$筛去的质数是 $2\times i,3\times i,5\times i$ </p>
+<p>即 $ 2\times5\times7 = 70$</p>
+<p>​    $ 3\times5\times7 = 105$</p>
+<p>​    $5\times5\times7 = 175 $</p>
 </li>
 <li><p>可以看成往原数 $i$ 中添加不超过 $i$ 的最小质因子的质数</p>
 </li>
@@ -1322,6 +1322,46 @@
   
   
 
+  
+    
+      <script type="text/x-mathjax-config">
+  
+
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$', '$'], ['\\(', '\\)'] ],
+      processEscapes: true,
+      skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    },
+    TeX: {
+      
+      equationNumbers: {
+        autoNumber: 'AMS'
+      }
+    }
+  });
+  MathJax.Hub.Register.StartupHook('TeX Jax Ready', function() {
+    MathJax.InputJax.TeX.prefilterHooks.Add(function(data) {
+      if (data.display) {
+        var next = data.script.nextSibling;
+        while (next && next.nodeName.toLowerCase() === '#text') { next = next.nextSibling }
+        if (next && next.nodeName.toLowerCase() === 'br') { next.parentNode.removeChild(next) }
+      }
+    });
+  });
+</script>
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for (i = 0; i < all.length; i += 1) {
+      document.getElementById(all[i].inputID + '-Frame').parentNode.className += ' has-jax';
+    }
+  });
+</script>
+<script src="//cdn.jsdelivr.net/npm/mathjax@2/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+    
   
 
 
