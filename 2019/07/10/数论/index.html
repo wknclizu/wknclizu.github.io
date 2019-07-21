@@ -102,10 +102,16 @@
 <meta property="og:site_name" content="wknclizu的博客">
 <meta property="og:description" content="费马小定理定理​    对于任意质数 $ p $ 和正整数 $ a &amp;lt; p $ ,有$ a^{p-1}\equiv(mod\ p) $ 证明​    易证 $ a,2a,3a,4a,….,(p-1)a    (mod\ p) $ 可以取遍$ 1 $ 到 $p-1 $之间的所有数（可用反证法证明） ​    于是 $a * 2a * 3a…*(p-1)a\equiv (p-1)! (mod \">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-07-21T10:58:28.375Z">
+<meta property="og:image" content="https://i.loli.net/2019/07/21/5d345200b43f218233.jpg">
+<meta property="og:image" content="https://i.loli.net/2019/07/21/5d345232abc7b63988.jpg">
+<meta property="og:image" content="https://i.loli.net/2019/07/21/5d345237cd58e21256.jpg">
+<meta property="og:image" content="https://i.loli.net/2019/07/21/5d3458c7878c098961.jpg">
+<meta property="og:image" content="https://i.loli.net/2019/07/21/5d345b5d356c442744.jpg">
+<meta property="og:updated_time" content="2019-07-21T12:36:30.446Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="数论">
 <meta name="twitter:description" content="费马小定理定理​    对于任意质数 $ p $ 和正整数 $ a &amp;lt; p $ ,有$ a^{p-1}\equiv(mod\ p) $ 证明​    易证 $ a,2a,3a,4a,….,(p-1)a    (mod\ p) $ 可以取遍$ 1 $ 到 $p-1 $之间的所有数（可用反证法证明） ​    于是 $a * 2a * 3a…*(p-1)a\equiv (p-1)! (mod \">
+<meta name="twitter:image" content="https://i.loli.net/2019/07/21/5d345200b43f218233.jpg">
 
 
 
@@ -491,7 +497,11 @@
 <li>求解关于$ x $的方程组$ x \equiv a_i (mod\ m_i)(1\le i \le n)$，$ m_i$两两互质</li>
 </ul>
 <p>题目<a href="https://www.luogu.org/problemnew/show/P4777" target="_blank" rel="noopener">洛谷P4777</a></p>
-<h2 id="欧拉函数"><a href="#欧拉函数" class="headerlink" title="欧拉函数"></a>欧拉函数</h2><p>欧拉函数$ \varphi(m)  $表示不超过$m$且与$m$互质的数的个数，特别的 $ \varphi(1) = 1 $</p>
+<h2 id="欧拉函数"><a href="#欧拉函数" class="headerlink" title="欧拉函数"></a>欧拉函数</h2><h3 id="前置知识"><a href="#前置知识" class="headerlink" title="前置知识"></a>前置知识</h3><p>唯一分解定理（算术基本定理）<del>，因为公式太难打</del>，所以我决定截<strong>具体数学</strong>上面的图</p>
+<p><img src="https://i.loli.net/2019/07/21/5d345200b43f218233.jpg" alt="具体数学P103"></p>
+<p><img src="https://i.loli.net/2019/07/21/5d345232abc7b63988.jpg" alt="证明"></p>
+<p><img src="https://i.loli.net/2019/07/21/5d345237cd58e21256.jpg" alt="证明2"></p>
+<h3 id="内容"><a href="#内容" class="headerlink" title="内容"></a>内容</h3><p>欧拉函数$ \varphi(m)  $表示不超过$m$且与$m$互质的数的个数，特别的 $ \varphi(1) = 1 $</p>
 <p>eg :  因为$1,3,5,7$均和$8$互质，所以$\varphi(8)=4$。</p>
 <h3 id="计算"><a href="#计算" class="headerlink" title="计算"></a>计算</h3><p>给出$m$的唯一分解式（其中$p_i$为质数）</p>
 <p>$$ m = \prod p_i^{a^i} $$</p>
@@ -531,10 +541,24 @@
 <li><p>即</p>
 <p>$$ a^{\varphi(m)}\equiv 1(mod\ m)$$</p>
 </li>
-<li><p>证毕</p>
+<li><p>证毕 <del>公式真的很难打</del></p>
 </li>
 </ul>
-<h3 id="拓展"><a href="#拓展" class="headerlink" title="拓展"></a>拓展</h3><p>当$b ≥φ(p)$ 时，$ a^b \equiv a^{b\ mod\ φ(p)+\varphi(p)}(mod\ p)$</p>
+<h3 id="拓展"><a href="#拓展" class="headerlink" title="拓展"></a>拓展</h3><p><a href="https://blog.csdn.net/synapse7/article/details/19610361" target="_blank" rel="noopener">from</a></p>
+<h4 id="内容-1"><a href="#内容-1" class="headerlink" title="内容"></a>内容</h4><p><del>似乎我的辣鸡Hexo推不上去下面这个公式所以只好上图片了</del></p>
+<p><img src="https://i.loli.net/2019/07/21/5d3458c7878c098961.jpg" alt></p>
+<p>其中$a$，$p$可以不互质</p>
+<p>其证明可以看 <a href="https://blog.csdn.net/ez_yww/article/details/76176970" target="_blank" rel="noopener">这里</a>，<del>原谅我实在看不懂了</del></p>
+<h4 id="应用"><a href="#应用" class="headerlink" title="应用"></a>应用</h4><p>对于同余式$a^b \equiv x(mod\ m)$，如何求出$x$ ?$(a &gt;= 1,m &lt;= 10^7,1 &lt;= b &lt;= 10^{1000000} )$</p>
+<ul>
+<li><p>若$\text{gcd}(a,m) = 1$，那么使用欧拉定理可得$a^b \equiv a^{b%\varphi(m)}$</p>
+</li>
+<li><p>这一句又推不上来了 ***</p>
+<p><img src="https://i.loli.net/2019/07/21/5d345b5d356c442744.jpg" alt></p>
+</li>
+<li><p>$b&lt;=\varphi(m)$时则可以直接使用快速幂</p>
+</li>
+</ul>
 <h3 id="例题-1"><a href="#例题-1" class="headerlink" title="例题"></a>例题</h3><p>链接： <a href="https://www.luogu.org/problemnew/show/P4139" target="_blank" rel="noopener">洛谷P4139</a></p>
 <p>解法:</p>
 <ul>
@@ -774,7 +798,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#费马小定理"><span class="nav-number">1.</span> <span class="nav-text">费马小定理</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#定理"><span class="nav-number">1.1.</span> <span class="nav-text">定理</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#证明"><span class="nav-number">1.2.</span> <span class="nav-text">证明</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#中国剩余定理-CRT"><span class="nav-number">2.</span> <span class="nav-text">中国剩余定理(CRT)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#欧拉函数"><span class="nav-number">3.</span> <span class="nav-text">欧拉函数</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#计算"><span class="nav-number">3.1.</span> <span class="nav-text">计算</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#证明-1"><span class="nav-number">3.2.</span> <span class="nav-text">证明</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#例题"><span class="nav-number">3.3.</span> <span class="nav-text">例题</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#欧拉定理"><span class="nav-number">4.</span> <span class="nav-text">欧拉定理</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#定义"><span class="nav-number">4.1.</span> <span class="nav-text">定义</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#证明-2"><span class="nav-number">4.2.</span> <span class="nav-text">证明</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#拓展"><span class="nav-number">4.3.</span> <span class="nav-text">拓展</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#例题-1"><span class="nav-number">4.4.</span> <span class="nav-text">例题</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#费马小定理"><span class="nav-number">1.</span> <span class="nav-text">费马小定理</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#定理"><span class="nav-number">1.1.</span> <span class="nav-text">定理</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#证明"><span class="nav-number">1.2.</span> <span class="nav-text">证明</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#中国剩余定理-CRT"><span class="nav-number">2.</span> <span class="nav-text">中国剩余定理(CRT)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#欧拉函数"><span class="nav-number">3.</span> <span class="nav-text">欧拉函数</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#前置知识"><span class="nav-number">3.1.</span> <span class="nav-text">前置知识</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#内容"><span class="nav-number">3.2.</span> <span class="nav-text">内容</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#计算"><span class="nav-number">3.3.</span> <span class="nav-text">计算</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#证明-1"><span class="nav-number">3.4.</span> <span class="nav-text">证明</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#例题"><span class="nav-number">3.5.</span> <span class="nav-text">例题</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#欧拉定理"><span class="nav-number">4.</span> <span class="nav-text">欧拉定理</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#定义"><span class="nav-number">4.1.</span> <span class="nav-text">定义</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#证明-2"><span class="nav-number">4.2.</span> <span class="nav-text">证明</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#拓展"><span class="nav-number">4.3.</span> <span class="nav-text">拓展</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#内容-1"><span class="nav-number">4.3.1.</span> <span class="nav-text">内容</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#应用"><span class="nav-number">4.3.2.</span> <span class="nav-text">应用</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#例题-1"><span class="nav-number">4.4.</span> <span class="nav-text">例题</span></a></li></ol></li></ol></div>
             
 
           </div>
