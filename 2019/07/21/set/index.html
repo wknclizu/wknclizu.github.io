@@ -94,20 +94,17 @@
 
 
 
-  <meta name="description" content="Markdown语法至于一些简单的自己去学吧 这是我的博客 12插入图片: ![badway]()文字链接: []()">
-<meta name="keywords" content="笔记,Markdown">
+  <meta name="description" content="setset 应该是基于平衡树的一种数据结构反正我不会写。值得注意的是set是会排序的，可以通过重载运算符的方法来更改排序方式 还有set中不允许有相同元素">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Markdown学习笔记">
-<meta property="og:url" content="https://wknclizu.github.io/2019/07/07/Markdown学习笔记/index.html">
+<meta property="og:title" content="set">
+<meta property="og:url" content="https://wknclizu.github.io/2019/07/21/set/index.html">
 <meta property="og:site_name" content="wknclizu的博客">
-<meta property="og:description" content="Markdown语法至于一些简单的自己去学吧 这是我的博客 12插入图片: ![badway]()文字链接: []()">
+<meta property="og:description" content="setset 应该是基于平衡树的一种数据结构反正我不会写。值得注意的是set是会排序的，可以通过重载运算符的方法来更改排序方式 还有set中不允许有相同元素">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="https://i.loli.net/2019/07/07/5d2147711310152769.jpg">
-<meta property="og:updated_time" content="2019-07-14T11:45:35.378Z">
+<meta property="og:updated_time" content="2019-07-21T12:49:22.412Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Markdown学习笔记">
-<meta name="twitter:description" content="Markdown语法至于一些简单的自己去学吧 这是我的博客 12插入图片: ![badway]()文字链接: []()">
-<meta name="twitter:image" content="https://i.loli.net/2019/07/07/5d2147711310152769.jpg">
+<meta name="twitter:title" content="set">
+<meta name="twitter:description" content="setset 应该是基于平衡树的一种数据结构反正我不会写。值得注意的是set是会排序的，可以通过重载运算符的方法来更改排序方式 还有set中不允许有相同元素">
 
 
 
@@ -115,7 +112,7 @@
 
   
   
-  <link rel="canonical" href="https://wknclizu.github.io/2019/07/07/Markdown学习笔记/">
+  <link rel="canonical" href="https://wknclizu.github.io/2019/07/21/set/">
 
 
 
@@ -125,7 +122,7 @@
   };
 </script>
 
-  <title>Markdown学习笔记 | wknclizu的博客</title>
+  <title>set | wknclizu的博客</title>
   
 
 
@@ -371,7 +368,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://wknclizu.github.io/2019/07/07/Markdown学习笔记/">
+    <link itemprop="mainEntityOfPage" href="https://wknclizu.github.io/2019/07/21/set/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="wknclizu">
@@ -388,7 +385,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">Markdown学习笔记
+          <h1 class="post-title" itemprop="name headline">set
 
               
             
@@ -414,34 +411,12 @@
                 
               
 
-              <time title="创建时间：2019-07-07 09:11:21" itemprop="dateCreated datePublished" datetime="2019-07-07T09:11:21+08:00">2019-07-07</time>
+              <time title="创建时间：2019-07-21 20:48:36" itemprop="dateCreated datePublished" datetime="2019-07-21T20:48:36+08:00">2019-07-21</time>
             </span>
           
 
           
 
-          
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/笔记/" itemprop="url" rel="index"><span itemprop="name">笔记</span></a></span>
-
-                
-                
-                  ，
-                
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/笔记/技术/" itemprop="url" rel="index"><span itemprop="name">技术</span></a></span>
-
-                
-                
-              
-            </span>
           
 
           
@@ -482,28 +457,43 @@
       
 
       
-        <h2 id="Markdown语法"><a href="#Markdown语法" class="headerlink" title="Markdown语法"></a>Markdown语法</h2><h3 id="至于一些简单的自己去学吧"><a href="#至于一些简单的自己去学吧" class="headerlink" title="至于一些简单的自己去学吧"></a>至于一些简单的自己去学吧</h3><p><img src="https://i.loli.net/2019/07/07/5d2147711310152769.jpg" alt="图片挂掉了"></p>
-<p><a href="https://wknclizu.github.io">这是我的博客</a></p>
-<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">插入图片: ![badway]()</span><br><span class="line">文字链接: []()</span><br></pre></td></tr></table></figure>
-
+        <h2 id="set"><a href="#set" class="headerlink" title="set"></a>set</h2><p>set 应该是基于平衡树的一种数据结构<del>反正我不会写。值得注意的是set是会排序的，</del>可以通过重载运算符的方法来更改排序方式</p>
+<p>还有set中<strong>不允许有相同元素</strong></p>
 <a id="more"></a>
 
+<p>它支持</p>
+<ul>
+<li>set.begin() 返回指向第一个元素的迭代器</li>
+<li>set.end() 返回指向最后一个元素的<strong><em>下一个元素</em></strong> 的迭代器</li>
+<li>set.empty() 判断集合是否为空</li>
+<li>set.size() 集合中元素的个数</li>
+<li>set.insert() 在集合中插入元素</li>
+<li>set.erase(x) 删除集合中等于$x$的元素</li>
+<li>set.clear() 清除所有元素</li>
+<li>set.find(x) 找到值为x的一个元素的迭代器</li>
+<li>set.lower_bound() 返回指向大于（或等于）某值的第一个元素的迭代器</li>
+<li>set.upper_bound() 返回指向小于（或等于）某值的第一个元素的迭代器</li>
+<li>swap() 交换两个集合</li>
+</ul>
+<p>等操作</p>
+<p>下面是一些操作实例，大部分来自<a href="http://www.cplusplus.com/reference/set/set/" target="_blank" rel="noopener">http://www.cplusplus.com/reference/set/set/</a>，可能稍稍有些修改</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;set&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span> <span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="built_in">std</span>::<span class="built_in">set</span>&lt;<span class="keyword">int</span>&gt; myset;</span><br><span class="line">	<span class="built_in">std</span>::<span class="built_in">set</span>&lt;<span class="keyword">int</span>&gt;::iterator it;</span><br><span class="line"></span><br><span class="line">	<span class="comment">// set some initial values:</span></span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i=<span class="number">1</span>; i&lt;=<span class="number">5</span>; i++) myset.insert(i*<span class="number">10</span>);<span class="comment">// set: 10 20 30 40 50</span></span><br><span class="line">	myset.insert(<span class="number">35</span>);</span><br><span class="line">	</span><br><span class="line">	it=myset.find(<span class="number">20</span>);</span><br><span class="line">	myset.erase (it);</span><br><span class="line">	myset.erase (myset.find(<span class="number">40</span>));</span><br><span class="line"></span><br><span class="line">	<span class="built_in">std</span>::<span class="built_in">cout</span> &lt;&lt; <span class="string">"myset contains:"</span>;</span><br><span class="line">	<span class="keyword">for</span> (it = myset.begin(); it != myset.end(); ++it)</span><br><span class="line">		<span class="built_in">std</span>::<span class="built_in">cout</span> &lt;&lt; <span class="string">' '</span> &lt;&lt; *it;</span><br><span class="line">	<span class="built_in">std</span>::<span class="built_in">cout</span> &lt;&lt; <span class="string">'\n'</span>;</span><br><span class="line"></span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//output : myset cintains:10 30 35 50;</span></span><br></pre></td></tr></table></figure>
 
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="built_in">set</span>&lt;<span class="keyword">int</span>&gt;::iterator it;</span><br><span class="line">	<span class="built_in">set</span>&lt;<span class="keyword">int</span>&gt; will;</span><br><span class="line">	will.insert(<span class="number">12</span>);</span><br><span class="line">	will.insert(<span class="number">12</span>);</span><br><span class="line">	will.insert(<span class="number">13</span>);</span><br><span class="line">	will.erase(<span class="number">12</span>);</span><br><span class="line">	<span class="keyword">for</span>(it = will.begin();it != will.end();it++)</span><br><span class="line">		<span class="built_in">cout</span>&lt;&lt;*it&lt;&lt;<span class="string">" "</span>;</span><br><span class="line">	<span class="built_in">cout</span>&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line">	will.insert(<span class="number">9</span>);</span><br><span class="line">	will.insert(<span class="number">13</span>);</span><br><span class="line">	will.insert(<span class="number">13</span>);</span><br><span class="line">	will.insert(<span class="number">15</span>);</span><br><span class="line">	<span class="built_in">cout</span>&lt;&lt;will.size()&lt;&lt;<span class="built_in">endl</span>;	</span><br><span class="line">	<span class="keyword">for</span>(it = will.find(<span class="number">13</span>);it != will.end();it++)</span><br><span class="line">		<span class="built_in">cout</span>&lt;&lt;*it&lt;&lt;<span class="string">" "</span>;</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//output : 13</span></span><br><span class="line"><span class="comment">//			3</span></span><br><span class="line"><span class="comment">//			13 15</span></span><br></pre></td></tr></table></figure>
 
-<h2 id="Mathjax语法"><a href="#Mathjax语法" class="headerlink" title="Mathjax语法"></a>Mathjax语法</h2><p><strong>注意所有公式都必须加 <code>$ 公式 $</code></strong></p>
-<p>$$\displaystyle \sum_{i=1}^{100} \frac{1}{i} \approx 400$$</p>
-<p>$ 3*4=12 $</p>
-<p>$\Sigma  \Gamma  \gamma$</p>
-<p>$$ x^{y^{z^2}}$$</p>
-<p>$$ (qwq)[qaq]  (qcccccc! ) $$</p>
-<p>$$\lfloor 2.5 \rfloor = 2$$</p>
-<p>$$\int _0 ^1 x^2 \text{d}x$$</p>
-<p>$$gcd(60,70) \text{lcm}(60,70)$$</p>
-<p>$$\sqrt{36}$$</p>
-<p>$$ \Delta = b^2-4ac$$</p>
-<p>$$ x = \frac{-b \pm \sqrt{b^2-4ac}}{2a}$$</p>
-<p>$$\displaystyle \prod_{i=1}^N x_i $$</p>
-<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">\sum为西格玛.上下需用&#123;&#125;括起来</span><br><span class="line">\approx为约等号</span><br><span class="line">\frac为分数</span><br><span class="line">$\Sigma  \Gamma  \gamma$可以打印希腊字母</span><br><span class="line"></span><br><span class="line">x^&#123;y^&#123;z^<span class="number">2</span>&#125;&#125; 字面意思</span><br><span class="line"></span><br><span class="line">$$ (qwq)[qaq]  \(qcccccc! \) $$</span><br><span class="line"></span><br><span class="line">$$\lfloor <span class="number">2.5</span> \rfloor = <span class="number">2</span>$$ 向下取整</span><br><span class="line"></span><br><span class="line">$$\<span class="keyword">int</span> _0 ^<span class="number">1</span> x^<span class="number">2</span> \text&#123;d&#125;x$$ 微积分</span><br><span class="line"></span><br><span class="line">$$ gcd(<span class="number">60</span>,<span class="number">70</span>) \text&#123;lcm&#125;(<span class="number">60</span>,<span class="number">70</span>)$$ gcd与lcm</span><br><span class="line"></span><br><span class="line">$$\<span class="built_in">sqrt</span>&#123;sth.&#125;$$ 开根号</span><br><span class="line"></span><br><span class="line">$$ \Delta = b^<span class="number">2</span><span class="number">-4</span>ac$$</span><br><span class="line"></span><br><span class="line">$$ x = \frac&#123;-b \pm \<span class="built_in">sqrt</span>&#123;b^<span class="number">2</span><span class="number">-4</span>ac&#125;&#125;&#123;<span class="number">2</span>a&#125;$$ 二次方程求根公式</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">$$\displaystyle \prod_&#123;i=<span class="number">1</span>&#125;^N x_i $$ 为累乘</span><br></pre></td></tr></table></figure>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;set&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> myints[]=&#123;<span class="number">12</span>,<span class="number">75</span>,<span class="number">10</span>,<span class="number">32</span>,<span class="number">20</span>,<span class="number">25</span>&#125;;</span><br><span class="line">	<span class="built_in">set</span>&lt;<span class="keyword">int</span>&gt; first (myints,myints+<span class="number">3</span>);	<span class="comment">// 10,12,75</span></span><br><span class="line">	<span class="built_in">set</span>&lt;<span class="keyword">int</span>&gt; second (myints+<span class="number">3</span>,myints+<span class="number">6</span>);<span class="comment">// 20,25,32</span></span><br><span class="line"></span><br><span class="line">	first.swap(second);</span><br><span class="line"></span><br><span class="line">	<span class="built_in">cout</span> &lt;&lt; <span class="string">"first contains:"</span>;</span><br><span class="line">	<span class="keyword">for</span> (<span class="built_in">set</span>&lt;<span class="keyword">int</span>&gt;::iterator it=first.begin(); it!=first.end(); ++it)</span><br><span class="line">		<span class="built_in">cout</span> &lt;&lt; <span class="string">' '</span> &lt;&lt; *it;</span><br><span class="line">	<span class="built_in">cout</span> &lt;&lt; <span class="string">'\n'</span>;</span><br><span class="line"></span><br><span class="line">	<span class="built_in">cout</span> &lt;&lt; <span class="string">"second contains:"</span>;</span><br><span class="line">	<span class="keyword">for</span> (<span class="built_in">set</span>&lt;<span class="keyword">int</span>&gt;::iterator it=second.begin(); it!=second.end(); ++it)</span><br><span class="line">		<span class="built_in">cout</span> &lt;&lt; <span class="string">' '</span> &lt;&lt; *it;</span><br><span class="line">	<span class="built_in">cout</span> &lt;&lt; <span class="string">'\n'</span>;</span><br><span class="line"></span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;set&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span> <span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">  <span class="built_in">std</span>::<span class="built_in">set</span>&lt;<span class="keyword">int</span>&gt; myset;</span><br><span class="line">  <span class="built_in">std</span>::<span class="built_in">set</span>&lt;<span class="keyword">int</span>&gt;::iterator it;</span><br><span class="line">  <span class="built_in">std</span>::pair&lt;<span class="built_in">std</span>::<span class="built_in">set</span>&lt;<span class="keyword">int</span>&gt;::iterator,<span class="keyword">bool</span>&gt; ret;</span><br><span class="line"></span><br><span class="line">  <span class="comment">// set some initial values:</span></span><br><span class="line">  <span class="keyword">for</span> (<span class="keyword">int</span> i=<span class="number">1</span>; i&lt;=<span class="number">5</span>; ++i) myset.insert(i*<span class="number">10</span>);    <span class="comment">// set: 10 20 30 40 50</span></span><br><span class="line"></span><br><span class="line">  ret = myset.insert(<span class="number">20</span>);               <span class="comment">// no new element inserted</span></span><br><span class="line"></span><br><span class="line">  <span class="keyword">if</span> (ret.second==<span class="literal">false</span>) it=ret.first;  <span class="comment">// "it" now points to element 20</span></span><br><span class="line"></span><br><span class="line">  myset.insert (it,<span class="number">25</span>);                 <span class="comment">// max efficiency inserting</span></span><br><span class="line">  myset.insert (it,<span class="number">24</span>);                 <span class="comment">// max efficiency inserting</span></span><br><span class="line">  myset.insert (it,<span class="number">26</span>);                 <span class="comment">// no max efficiency inserting</span></span><br><span class="line"></span><br><span class="line">  <span class="keyword">int</span> myints[]= &#123;<span class="number">5</span>,<span class="number">10</span>,<span class="number">15</span>&#125;;              <span class="comment">// 10 already in set, not inserted</span></span><br><span class="line">  myset.insert (myints,myints+<span class="number">3</span>);</span><br><span class="line"></span><br><span class="line">  <span class="built_in">std</span>::<span class="built_in">cout</span> &lt;&lt; <span class="string">"myset contains:"</span>;</span><br><span class="line">  <span class="keyword">for</span> (it=myset.begin(); it!=myset.end(); ++it)</span><br><span class="line">    <span class="built_in">std</span>::<span class="built_in">cout</span> &lt;&lt; <span class="string">' '</span> &lt;&lt; *it;</span><br><span class="line">  <span class="built_in">std</span>::<span class="built_in">cout</span> &lt;&lt; <span class="string">'\n'</span>;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="multiset"><a href="#multiset" class="headerlink" title="multiset"></a>multiset</h3><p>$multiset$，它可以看成一个序列，插入一个数，删除一个数都能够在$O(logn)$的时间内完成，而且它能时刻保证序列中的数是有序的，而且序列中<strong>可以存在重复的数。</strong></p>
+<p>支持的操作和$set$差不多，可以参考这篇<a href="https://blog.csdn.net/sodacoco/article/details/84798621" target="_blank" rel="noopener">博客</a></p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;set&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span> <span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">  <span class="keyword">int</span> myints[] = &#123;<span class="number">42</span>,<span class="number">71</span>,<span class="number">71</span>,<span class="number">71</span>,<span class="number">12</span>&#125;;</span><br><span class="line">  <span class="built_in">std</span>::<span class="built_in">multiset</span>&lt;<span class="keyword">int</span>&gt; mymultiset (myints,myints+<span class="number">5</span>);</span><br><span class="line"></span><br><span class="line">  <span class="built_in">std</span>::<span class="built_in">multiset</span>&lt;<span class="keyword">int</span>&gt;::iterator it;</span><br><span class="line"></span><br><span class="line">  <span class="built_in">std</span>::<span class="built_in">cout</span> &lt;&lt; <span class="string">"mymultiset contains:"</span>;</span><br><span class="line">  <span class="keyword">for</span> (<span class="built_in">std</span>::<span class="built_in">multiset</span>&lt;<span class="keyword">int</span>&gt;::iterator it=mymultiset.begin(); it!=mymultiset.end(); ++it)</span><br><span class="line">    <span class="built_in">std</span>::<span class="built_in">cout</span> &lt;&lt; <span class="string">' '</span> &lt;&lt; *it;</span><br><span class="line"></span><br><span class="line">  <span class="built_in">std</span>::<span class="built_in">cout</span> &lt;&lt; <span class="string">'\n'</span>;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>这是$ insert $的用法</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;set&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span> <span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">  <span class="built_in">std</span>::<span class="built_in">multiset</span>&lt;<span class="keyword">int</span>&gt; mymultiset;</span><br><span class="line">  <span class="built_in">std</span>::<span class="built_in">multiset</span>&lt;<span class="keyword">int</span>&gt;::iterator it;</span><br><span class="line"></span><br><span class="line">  <span class="comment">// set some initial values:</span></span><br><span class="line">  <span class="keyword">for</span> (<span class="keyword">int</span> i=<span class="number">1</span>; i&lt;=<span class="number">5</span>; i++) mymultiset.insert(i*<span class="number">10</span>);  <span class="comment">// 10 20 30 40 50</span></span><br><span class="line"></span><br><span class="line">  it=mymultiset.insert(<span class="number">25</span>);</span><br><span class="line"></span><br><span class="line">  it=mymultiset.insert (it,<span class="number">27</span>);    <span class="comment">// max efficiency inserting</span></span><br><span class="line">  it=mymultiset.insert (it,<span class="number">29</span>);    <span class="comment">// max efficiency inserting</span></span><br><span class="line">  it=mymultiset.insert (it,<span class="number">24</span>);    <span class="comment">// no max efficiency inserting (24&lt;29)</span></span><br><span class="line"></span><br><span class="line">  <span class="keyword">int</span> myints[]= &#123;<span class="number">5</span>,<span class="number">10</span>,<span class="number">15</span>&#125;;</span><br><span class="line">  mymultiset.insert (myints,myints+<span class="number">3</span>);</span><br><span class="line"></span><br><span class="line">  <span class="built_in">std</span>::<span class="built_in">cout</span> &lt;&lt; <span class="string">"mymultiset contains:"</span>;</span><br><span class="line">  <span class="keyword">for</span> (it=mymultiset.begin(); it!=mymultiset.end(); ++it)</span><br><span class="line">    <span class="built_in">std</span>::<span class="built_in">cout</span> &lt;&lt; <span class="string">' '</span> &lt;&lt; *it;</span><br><span class="line">  <span class="built_in">std</span>::<span class="built_in">cout</span> &lt;&lt; <span class="string">'\n'</span>;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>这是$erase$的用法</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;set&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span> <span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">  <span class="built_in">std</span>::<span class="built_in">multiset</span>&lt;<span class="keyword">int</span>&gt; mymultiset;</span><br><span class="line">  <span class="built_in">std</span>::<span class="built_in">multiset</span>&lt;<span class="keyword">int</span>&gt;::iterator it;</span><br><span class="line"></span><br><span class="line">  <span class="comment">// insert some values:</span></span><br><span class="line">  mymultiset.insert (<span class="number">40</span>);                            <span class="comment">// 40</span></span><br><span class="line">  <span class="keyword">for</span> (<span class="keyword">int</span> i=<span class="number">1</span>; i&lt;<span class="number">7</span>; i++) mymultiset.insert(i*<span class="number">10</span>);   <span class="comment">// 10 20 30 40 40 50 60</span></span><br><span class="line"></span><br><span class="line">  it=mymultiset.begin();</span><br><span class="line">  it++;                                              <span class="comment">//    ^</span></span><br><span class="line"></span><br><span class="line">  mymultiset.erase (it);                             <span class="comment">// 10 30 40 40 50 60</span></span><br><span class="line"></span><br><span class="line">  mymultiset.erase (<span class="number">40</span>);                             <span class="comment">// 10 30 50 60</span></span><br><span class="line"></span><br><span class="line">  it=mymultiset.find (<span class="number">50</span>);</span><br><span class="line">  mymultiset.erase ( it, mymultiset.end() );         <span class="comment">// 10 30</span></span><br><span class="line"></span><br><span class="line">  <span class="built_in">std</span>::<span class="built_in">cout</span> &lt;&lt; <span class="string">"mymultiset contains:"</span>;</span><br><span class="line">  <span class="keyword">for</span> (it=mymultiset.begin(); it!=mymultiset.end(); ++it)</span><br><span class="line">    <span class="built_in">std</span>::<span class="built_in">cout</span> &lt;&lt; <span class="string">' '</span> &lt;&lt; *it;</span><br><span class="line">  <span class="built_in">std</span>::<span class="built_in">cout</span> &lt;&lt; <span class="string">'\n'</span>;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">Output:</span></span><br><span class="line"><span class="comment">mymultiset contains: 10 30</span></span><br></pre></td></tr></table></figure>
 
 
       
@@ -526,17 +516,6 @@
 
     <footer class="post-footer">
       
-        
-          
-        
-        <div class="post-tags">
-          
-            <a href="/tags/笔记/" rel="tag"># 笔记</a>
-          
-            <a href="/tags/Markdown/" rel="tag"># Markdown</a>
-          
-        </div>
-      
 
       
       
@@ -546,15 +525,15 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
+              <a href="/2019/07/21/queue/" rel="next" title="queue">
+                <i class="fa fa-chevron-left"></i> queue
+              </a>
+            
           </div>
 
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2019/07/10/基础数学/" rel="prev" title="基础数学">
-                基础数学 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -733,7 +712,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Markdown语法"><span class="nav-number">1.</span> <span class="nav-text">Markdown语法</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#至于一些简单的自己去学吧"><span class="nav-number">1.1.</span> <span class="nav-text">至于一些简单的自己去学吧</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Mathjax语法"><span class="nav-number">2.</span> <span class="nav-text">Mathjax语法</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#set"><span class="nav-number">1.</span> <span class="nav-text">set</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#multiset"><span class="nav-number">1.1.</span> <span class="nav-text">multiset</span></a></li></ol></li></ol></div>
             
 
           </div>
