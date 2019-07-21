@@ -107,7 +107,7 @@
 <meta property="og:image" content="https://i.loli.net/2019/07/21/5d345237cd58e21256.jpg">
 <meta property="og:image" content="https://i.loli.net/2019/07/21/5d3458c7878c098961.jpg">
 <meta property="og:image" content="https://i.loli.net/2019/07/21/5d345b5d356c442744.jpg">
-<meta property="og:updated_time" content="2019-07-21T12:36:30.446Z">
+<meta property="og:updated_time" content="2019-07-21T12:43:00.815Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="数论">
 <meta name="twitter:description" content="费马小定理定理​    对于任意质数 $ p $ 和正整数 $ a &amp;lt; p $ ,有$ a^{p-1}\equiv(mod\ p) $ 证明​    易证 $ a,2a,3a,4a,….,(p-1)a    (mod\ p) $ 可以取遍$ 1 $ 到 $p-1 $之间的所有数（可用反证法证明） ​    于是 $a * 2a * 3a…*(p-1)a\equiv (p-1)! (mod \">
@@ -548,12 +548,12 @@
 <h4 id="内容-1"><a href="#内容-1" class="headerlink" title="内容"></a>内容</h4><p><del>似乎我的辣鸡Hexo推不上去下面这个公式所以只好上图片了</del></p>
 <p><img src="https://i.loli.net/2019/07/21/5d3458c7878c098961.jpg" alt></p>
 <p>其中$a$，$p$可以不互质</p>
-<p>其证明可以看 <a href="https://blog.csdn.net/ez_yww/article/details/76176970" target="_blank" rel="noopener">这里</a>，<del>原谅我实在看不懂了</del></p>
+<p>其证明可以看 <a href="https://blog.csdn.net/ez_yww/article/details/76176970" target="_blank" rel="noopener">这里</a></p>
 <h4 id="应用"><a href="#应用" class="headerlink" title="应用"></a>应用</h4><p>对于同余式$a^b \equiv x(mod\ m)$，如何求出$x$ ?$(a &gt;= 1,m &lt;= 10^7,1 &lt;= b &lt;= 10^{1000000} )$</p>
 <ul>
-<li><p>若$\text{gcd}(a,m) = 1$，那么使用欧拉定理可得$a^b \equiv a^{b%\varphi(m)}$</p>
+<li><p>若$\text{gcd}(a,m) = 1$，那么使用欧拉定理可得$a^b \equiv a^{b\ mod\ \varphi(m)}$</p>
 </li>
-<li><p>这一句又推不上来了 ***</p>
+<li><p>这一句又推不上来了</p>
 <p><img src="https://i.loli.net/2019/07/21/5d345b5d356c442744.jpg" alt></p>
 </li>
 <li><p>$b&lt;=\varphi(m)$时则可以直接使用快速幂</p>
