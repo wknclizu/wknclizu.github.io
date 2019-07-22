@@ -4,6 +4,13 @@
     <title><![CDATA[set]]></title>
     <url>%2F2019%2F07%2F21%2Fset%2F</url>
     <content type="text"><![CDATA[setset 应该是基于平衡树的一种数据结构反正我不会写。值得注意的是set是会排序的，可以通过重载运算符的方法来更改排序方式 还有set中不允许有相同元素 它支持 set.begin() 返回指向第一个元素的迭代器 set.end() 返回指向最后一个元素的下一个元素 的迭代器 set.empty() 判断集合是否为空 set.size() 集合中元素的个数 set.insert() 在集合中插入元素 set.erase(x) 删除集合中等于$x$的元素 set.clear() 清除所有元素 set.find(x) 找到值为x的一个元素的迭代器 set.lower_bound() 返回指向大于（或等于）某值的第一个元素的迭代器 set.upper_bound() 返回指向小于（或等于）某值的第一个元素的迭代器 swap() 交换两个集合 等操作 下面是一些操作实例，大部分来自http://www.cplusplus.com/reference/set/set/，可能稍稍有些修改 123456789101112131415161718192021222324#include &lt;iostream&gt;#include &lt;set&gt;int main ()&#123; std::set&lt;int&gt; myset; std::set&lt;int&gt;::iterator it; // set some initial values: for (int i=1; i&lt;=5; i++) myset.insert(i*10);// set: 10 20 30 40 50 myset.insert(35); it=myset.find(20); myset.erase (it); myset.erase (myset.find(40)); std::cout &lt;&lt; "myset contains:"; for (it = myset.begin(); it != myset.end(); ++it) std::cout &lt;&lt; ' ' &lt;&lt; *it; std::cout &lt;&lt; '\n'; return 0;&#125;//output : myset cintains:10 30 35 50; 123456789101112131415161718192021222324252627#include &lt;bits/stdc++.h&gt;using namespace std;int main()&#123; set&lt;int&gt;::iterator it; set&lt;int&gt; will; will.insert(12); will.insert(12); will.insert(13); will.erase(12); for(it = will.begin();it != will.end();it++) cout&lt;&lt;*it&lt;&lt;" "; cout&lt;&lt;endl; will.insert(9); will.insert(13); will.insert(13); will.insert(15); cout&lt;&lt;will.size()&lt;&lt;endl; for(it = will.find(13);it != will.end();it++) cout&lt;&lt;*it&lt;&lt;" "; return 0;&#125;//output : 13// 3// 13 15 123456789101112131415161718192021222324#include &lt;iostream&gt;#include &lt;set&gt;using namespace std;int main()&#123; int myints[]=&#123;12,75,10,32,20,25&#125;; set&lt;int&gt; first (myints,myints+3); // 10,12,75 set&lt;int&gt; second (myints+3,myints+6);// 20,25,32 first.swap(second); cout &lt;&lt; "first contains:"; for (set&lt;int&gt;::iterator it=first.begin(); it!=first.end(); ++it) cout &lt;&lt; ' ' &lt;&lt; *it; cout &lt;&lt; '\n'; cout &lt;&lt; "second contains:"; for (set&lt;int&gt;::iterator it=second.begin(); it!=second.end(); ++it) cout &lt;&lt; ' ' &lt;&lt; *it; cout &lt;&lt; '\n'; return 0;&#125; 123456789101112131415161718192021222324252627282930#include &lt;iostream&gt;#include &lt;set&gt;int main ()&#123; std::set&lt;int&gt; myset; std::set&lt;int&gt;::iterator it; std::pair&lt;std::set&lt;int&gt;::iterator,bool&gt; ret; // set some initial values: for (int i=1; i&lt;=5; ++i) myset.insert(i*10); // set: 10 20 30 40 50 ret = myset.insert(20); // no new element inserted if (ret.second==false) it=ret.first; // "it" now points to element 20 myset.insert (it,25); // max efficiency inserting myset.insert (it,24); // max efficiency inserting myset.insert (it,26); // no max efficiency inserting int myints[]= &#123;5,10,15&#125;; // 10 already in set, not inserted myset.insert (myints,myints+3); std::cout &lt;&lt; "myset contains:"; for (it=myset.begin(); it!=myset.end(); ++it) std::cout &lt;&lt; ' ' &lt;&lt; *it; std::cout &lt;&lt; '\n'; return 0;&#125; multiset$multiset$，它可以看成一个序列，插入一个数，删除一个数都能够在$O(logn)$的时间内完成，而且它能时刻保证序列中的数是有序的，而且序列中可以存在重复的数。 支持的操作和$set$差不多，可以参考这篇博客 123456789101112131415161718#include &lt;iostream&gt;#include &lt;set&gt;int main ()&#123; int myints[] = &#123;42,71,71,71,12&#125;; std::multiset&lt;int&gt; mymultiset (myints,myints+5); std::multiset&lt;int&gt;::iterator it; std::cout &lt;&lt; "mymultiset contains:"; for (std::multiset&lt;int&gt;::iterator it=mymultiset.begin(); it!=mymultiset.end(); ++it) std::cout &lt;&lt; ' ' &lt;&lt; *it; std::cout &lt;&lt; '\n'; return 0;&#125; 这是$ insert $的用法 123456789101112131415161718192021222324252627#include &lt;iostream&gt;#include &lt;set&gt;int main ()&#123; std::multiset&lt;int&gt; mymultiset; std::multiset&lt;int&gt;::iterator it; // set some initial values: for (int i=1; i&lt;=5; i++) mymultiset.insert(i*10); // 10 20 30 40 50 it=mymultiset.insert(25); it=mymultiset.insert (it,27); // max efficiency inserting it=mymultiset.insert (it,29); // max efficiency inserting it=mymultiset.insert (it,24); // no max efficiency inserting (24&lt;29) int myints[]= &#123;5,10,15&#125;; mymultiset.insert (myints,myints+3); std::cout &lt;&lt; "mymultiset contains:"; for (it=mymultiset.begin(); it!=mymultiset.end(); ++it) std::cout &lt;&lt; ' ' &lt;&lt; *it; std::cout &lt;&lt; '\n'; return 0;&#125; 这是$erase$的用法 1234567891011121314151617181920212223242526272829303132#include &lt;iostream&gt;#include &lt;set&gt;int main ()&#123; std::multiset&lt;int&gt; mymultiset; std::multiset&lt;int&gt;::iterator it; // insert some values: mymultiset.insert (40); // 40 for (int i=1; i&lt;7; i++) mymultiset.insert(i*10); // 10 20 30 40 40 50 60 it=mymultiset.begin(); it++; // ^ mymultiset.erase (it); // 10 30 40 40 50 60 mymultiset.erase (40); // 10 30 50 60 it=mymultiset.find (50); mymultiset.erase ( it, mymultiset.end() ); // 10 30 std::cout &lt;&lt; "mymultiset contains:"; for (it=mymultiset.begin(); it!=mymultiset.end(); ++it) std::cout &lt;&lt; ' ' &lt;&lt; *it; std::cout &lt;&lt; '\n'; return 0;&#125;/*Output:mymultiset contains: 10 30]]></content>
+      <categories>
+        <category>笔记</category>
+        <category>STL</category>
+      </categories>
+      <tags>
+        <tag>笔记</tag>
+      </tags>
   </entry>
   <entry>
     <title><![CDATA[queue]]></title>
@@ -38,7 +45,6 @@
       </categories>
       <tags>
         <tag>笔记</tag>
-        <tag>STL</tag>
       </tags>
   </entry>
   <entry>
@@ -51,7 +57,6 @@
       </categories>
       <tags>
         <tag>笔记</tag>
-        <tag>数据结构</tag>
       </tags>
   </entry>
   <entry>
@@ -64,13 +69,12 @@
       </categories>
       <tags>
         <tag>笔记</tag>
-        <tag>初赛</tag>
       </tags>
   </entry>
   <entry>
     <title><![CDATA[暑假集训]]></title>
     <url>%2F2019%2F07%2F12%2F%E6%9A%91%E5%81%87%E9%9B%86%E8%AE%AD%2F</url>
-    <content type="text"><![CDATA[Day 1今天是7月12日，刚开完家长会一天就会到学校了（其他竞赛的都没来），大概要上到8月3号真是惨兮兮，不对三天后就是NOI同步赛了好像我参加也没什么么用。 Day 2今天仍然在学习线性表呢，还有STL Day 3今天除了线性表还讲了一些初赛知识，还有几道题 Day 4今天学了单调队列？？？，还有晚上的外卖真好吃 Day5今天就是NOI同步赛了看蒟蒻如何爆零]]></content>
+    <content type="text"><![CDATA[Day 1今天是7月12日，刚开完家长会一天就会到学校了（其他竞赛的都没来），大概要上到8月3号真是惨兮兮，不对三天后就是NOI同步赛了好像我参加也没什么么用。 Day 2今天仍然在学习线性表呢，还有STL Day 3今天除了线性表还讲了一些初赛知识，还有几道题 Day 4今天学了单调队列？？？，还有晚上的外卖真好吃 Day5今天就是NOI同步赛了看蒟蒻如何爆零 Day 6 to INF咕了]]></content>
       <categories>
         <category>随笔</category>
       </categories>
@@ -88,7 +92,6 @@
       </categories>
       <tags>
         <tag>笔记</tag>
-        <tag>数学</tag>
       </tags>
   </entry>
   <entry>
@@ -101,7 +104,6 @@
       </categories>
       <tags>
         <tag>笔记</tag>
-        <tag>数学</tag>
       </tags>
   </entry>
   <entry>
@@ -114,7 +116,6 @@
       </categories>
       <tags>
         <tag>笔记</tag>
-        <tag>Markdown</tag>
       </tags>
   </entry>
 </search>
