@@ -1722,9 +1722,6 @@ pre .javascript .function {
   border: 1px solid #eee;
   opacity: 1;
 }
-.site-author-image {
-  border-radius: 100%;
-}
 .site-author-name {
   margin: 0;
   text-align: center;
@@ -1758,7 +1755,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #ff3c8c;
+  background: #ff5dff;
 }
 .feed-link,
 .chat {
@@ -2997,17 +2994,8 @@ ul.breadcrumb li+li:last-child {
     margin: 8px 0 0;
   }
 }
-body {
-  background-image: url("/images/background1.jpg");
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-size: cover;
-}
-.main-inner {
-  opacity: 0.9;
-}
-.sidebar {
-  background: rgba(0,0,0,0);
+.site-meta {
+  background: #0684bd;
 }
 .hitokoto-title {
   text-align: center;
