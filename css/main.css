@@ -1758,7 +1758,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #ff7491;
+  background: #ff3c8c;
 }
 .feed-link,
 .chat {
@@ -3008,4 +3008,17 @@ body {
 }
 .sidebar {
   background: rgba(0,0,0,0);
+}
+.hitokoto-title {
+  text-align: center;
+  font-size: 14px;
+}
+#hitokoto {
+  font-family: "Microsoft YaHei";
+  font-size: 13px;
+}
+#hitofrom {
+  float: right;
+  font-family: "Microsoft YaHei";
+  font-size: 12px;
 }

@@ -107,7 +107,7 @@
 <meta property="og:image" content="https://i.loli.net/2019/07/21/5d345237cd58e21256.jpg">
 <meta property="og:image" content="https://i.loli.net/2019/07/21/5d3458c7878c098961.jpg">
 <meta property="og:image" content="https://i.loli.net/2019/07/21/5d345b5d356c442744.jpg">
-<meta property="og:updated_time" content="2019-07-22T12:20:25.886Z">
+<meta property="og:updated_time" content="2019-07-24T13:39:26.964Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="数论">
 <meta name="twitter:description" content="费马小定理定理​    对于任意质数 $ p $ 和正整数 $ a &amp;lt; p $ ,有$ a^{p-1}\equiv(mod\ p) $ 证明​    易证 $ a,2a,3a,4a,….,(p-1)a    (mod\ p) $ 可以取遍$ 1 $ 到 $p-1 $之间的所有数（可用反证法证明） ​    于是 $a * 2a * 3a…*(p-1)a\equiv (p-1)! (mod \">
@@ -549,7 +549,22 @@
 <p><img src="https://i.loli.net/2019/07/21/5d3458c7878c098961.jpg" alt></p>
 <p>其中$a$，$p$可以不互质</p>
 <p>其证明可以看 <a href="https://blog.csdn.net/ez_yww/article/details/76176970" target="_blank" rel="noopener">这里</a></p>
-<h4 id="应用"><a href="#应用" class="headerlink" title="应用"></a>应用</h4><p><a href="http://acm.hdu.edu.cn/showproblem.php?pid=2837" target="_blank" rel="noopener">HDU2837</a></p>
+<h4 id="证明-3"><a href="#证明-3" class="headerlink" title="证明"></a>证明</h4><h5 id="引理1"><a href="#引理1" class="headerlink" title="引理1"></a>引理1</h5><p>当存在$$x\equiv y \pmod {m_1}$$</p>
+<p>$$ x\equiv y \pmod {m_2}$$</p>
+<p>则有$$x\equiv y\pmod {lcm(m_1,m_2)}$$</p>
+<h6 id="证明-4"><a href="#证明-4" class="headerlink" title="证明"></a>证明</h6><p>设$x = y+a_1m_1 = y+a_2m_2$</p>
+<p>所以$a_1m_1 = a_2m_2$</p>
+<p>很显然这个是$lcm(m_1,m_2)$的倍数</p>
+<p>故引理获证</p>
+<h6 id="推论"><a href="#推论" class="headerlink" title="推论"></a>推论</h6><ol>
+<li><p>当$gcd(m_1,m_2) = 1$时，$x\equiv y\pmod {m_1m_2}$</p>
+</li>
+<li><p>$$\begin{cases}x\equiv y\pmod{m_1} \ x\equiv y\pmod{m_2} \\cdots \ x\equiv y\pmod {m_n}\end{cases}\Rightarrow x\equiv y\pmod{lcm(m_1,m_2,\ldots,m_n)}$$</p>
+</li>
+</ol>
+<h5 id="引理2"><a href="#引理2" class="headerlink" title="引理2"></a>引理2</h5><p>$p$为素数，$q$为大于$1$的正整数，有$\varphi(p^q) = p^q-p^{q-1}$，则有$\varphi(p^q)\ge q$</p>
+<h6 id="证明-5"><a href="#证明-5" class="headerlink" title="证明"></a>证明</h6><p>小于$p^k$的正整数有$p^k−1$个，其中和$p^k$不互质的正整数为${p,2p,…,(p^{k−1}-1)p}$，共$p^{k-1}−1$个数，因此$φ(n)=p^k−p^{k−1}$</p>
+<h5 id="正文"><a href="#正文" class="headerlink" title="正文"></a>正文</h5><h4 id="应用"><a href="#应用" class="headerlink" title="应用"></a>应用</h4><p><a href="http://acm.hdu.edu.cn/showproblem.php?pid=2837" target="_blank" rel="noopener">HDU2837</a></p>
 <p>对于同余式$a^b \equiv x(mod\ m)$，如何求出$x$ ?$(a &gt;= 1,m &lt;= 10^7,1 &lt;= b &lt;= 10^{1000000} )$</p>
 <ul>
 <li><p>若$\text{gcd}(a,m) = 1$，那么使用欧拉定理可得$a^b \equiv a^{b\ mod\ \varphi(m)}$</p>
@@ -693,7 +708,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">10</span>
+                    <span class="site-state-item-count">12</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
@@ -749,16 +764,6 @@
                     
                       
                     
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
                     <span class="site-state-item-count">3</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
@@ -804,6 +809,37 @@
             
           
           
+<!-- none-select-br -->
+
+<p></p>
+
+<!-- hitokoto -->
+
+<div class="hitokoto-title">
+	<i class="fa fa-paragraph"></i>
+	<b>一言</b>
+</div>
+
+<div id="hitokoto">:D 获取中...</div>
+<i id="hitofrom">:D 获取中...</i>
+
+<script src="https://cdn.jsdelivr.net/npm/bluebird@3/js/browser/bluebird.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/whatwg-fetch@2.0.3/fetch.min.js"></script>
+<script>
+  fetch('https://v1.hitokoto.cn')
+    .then(function (res){
+      return res.json();
+    })
+    .then(function (data) {
+      var hitokoto = document.getElementById('hitokoto');
+      hitokoto.innerText = '\xa0\xa0\xa0\xa0\xa0\xa0\xa0' + data.hitokoto;
+      var hitofrom = document.getElementById('hitofrom');
+      hitofrom.innerText = "——" + data.from + '\xa0';
+    })
+    .catch(function (err) {
+      console.error(err);
+    })
+</script>
 
         </div>
       </div>
@@ -819,7 +855,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#费马小定理"><span class="nav-number">1.</span> <span class="nav-text">费马小定理</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#定理"><span class="nav-number">1.1.</span> <span class="nav-text">定理</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#证明"><span class="nav-number">1.2.</span> <span class="nav-text">证明</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#中国剩余定理-CRT"><span class="nav-number">2.</span> <span class="nav-text">中国剩余定理(CRT)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#欧拉函数"><span class="nav-number">3.</span> <span class="nav-text">欧拉函数</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#前置知识"><span class="nav-number">3.1.</span> <span class="nav-text">前置知识</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#内容"><span class="nav-number">3.2.</span> <span class="nav-text">内容</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#计算"><span class="nav-number">3.3.</span> <span class="nav-text">计算</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#证明-1"><span class="nav-number">3.4.</span> <span class="nav-text">证明</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#例题"><span class="nav-number">3.5.</span> <span class="nav-text">例题</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#欧拉定理"><span class="nav-number">4.</span> <span class="nav-text">欧拉定理</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#定义"><span class="nav-number">4.1.</span> <span class="nav-text">定义</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#证明-2"><span class="nav-number">4.2.</span> <span class="nav-text">证明</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#拓展"><span class="nav-number">4.3.</span> <span class="nav-text">拓展</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#内容-1"><span class="nav-number">4.3.1.</span> <span class="nav-text">内容</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#应用"><span class="nav-number">4.3.2.</span> <span class="nav-text">应用</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#例题-1"><span class="nav-number">4.4.</span> <span class="nav-text">例题</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#费马小定理"><span class="nav-number">1.</span> <span class="nav-text">费马小定理</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#定理"><span class="nav-number">1.1.</span> <span class="nav-text">定理</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#证明"><span class="nav-number">1.2.</span> <span class="nav-text">证明</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#中国剩余定理-CRT"><span class="nav-number">2.</span> <span class="nav-text">中国剩余定理(CRT)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#欧拉函数"><span class="nav-number">3.</span> <span class="nav-text">欧拉函数</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#前置知识"><span class="nav-number">3.1.</span> <span class="nav-text">前置知识</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#内容"><span class="nav-number">3.2.</span> <span class="nav-text">内容</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#计算"><span class="nav-number">3.3.</span> <span class="nav-text">计算</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#证明-1"><span class="nav-number">3.4.</span> <span class="nav-text">证明</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#例题"><span class="nav-number">3.5.</span> <span class="nav-text">例题</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#欧拉定理"><span class="nav-number">4.</span> <span class="nav-text">欧拉定理</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#定义"><span class="nav-number">4.1.</span> <span class="nav-text">定义</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#证明-2"><span class="nav-number">4.2.</span> <span class="nav-text">证明</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#拓展"><span class="nav-number">4.3.</span> <span class="nav-text">拓展</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#内容-1"><span class="nav-number">4.3.1.</span> <span class="nav-text">内容</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#证明-3"><span class="nav-number">4.3.2.</span> <span class="nav-text">证明</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#引理1"><span class="nav-number">4.3.2.1.</span> <span class="nav-text">引理1</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#证明-4"><span class="nav-number">4.3.2.1.1.</span> <span class="nav-text">证明</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#推论"><span class="nav-number">4.3.2.1.2.</span> <span class="nav-text">推论</span></a></li></ol></li><li class="nav-item nav-level-5"><a class="nav-link" href="#引理2"><span class="nav-number">4.3.2.2.</span> <span class="nav-text">引理2</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#证明-5"><span class="nav-number">4.3.2.2.1.</span> <span class="nav-text">证明</span></a></li></ol></li><li class="nav-item nav-level-5"><a class="nav-link" href="#正文"><span class="nav-number">4.3.2.3.</span> <span class="nav-text">正文</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#应用"><span class="nav-number">4.3.3.</span> <span class="nav-text">应用</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#例题-1"><span class="nav-number">4.4.</span> <span class="nav-text">例题</span></a></li></ol></li></ol></div>
             
 
           </div>
@@ -956,7 +992,7 @@
 
 
   
-  <script src="/lib/jquery/index.js?v=3.4.1"></script>
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
 
   
   <script src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
