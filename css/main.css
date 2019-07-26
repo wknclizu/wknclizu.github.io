@@ -1296,7 +1296,7 @@ pre .javascript .function {
 .posts-expand .post-body h6 .header-anchor {
   float: right;
   margin-left: 10px;
-  color: #ccc;
+  color: #0684bd;
   border-bottom-style: none;
   visibility: hidden;
 }
@@ -1755,7 +1755,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #669e6a;
+  background: #ffff0d;
 }
 .feed-link,
 .chat {
