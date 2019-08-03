@@ -1,6 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[编译器]]></title>
+    <url>%2F2019%2F08%2F03%2F%E7%BC%96%E8%AF%91%E5%99%A8%2F</url>
+    <content type="text"><![CDATA[问题描述​ CCF是信奥班的成员，因为喜欢玩Android系统而出名。 ​ CCF写出了一个伟大的C++工程，一共包含N个源文件。在CCF的脑海中，N个源文件构成一个树形结构。每一个源文件是树上的一个节点，其中1号节点是树根。现在，CCF开始编译这个工程。每次他会从树上选择一条链（包含两个端点）迚行编译。由于编译器的特性，要求这条链的一个端点必须是另一个端点的祖先。一条链可以退化成一个点。每个源文件都需要被编译恰好一次。​ 每一个源文件都有一个两位十六迚制数的标志值（范围从$00$到$ff$）。对于每一条选择的链，把该上面所有源文件的标志值异或起来，得到这条链的特征值。把所有选择的链的特征值相加，得到这次编译的代价。​ 现在CCF想知道至少选择几条链才能编译所有文件。在选择的链数目最小的时候，编译的代价最小是多少。【输入格式】​ 第一行一个整数N。​ 以下一行，N个两位十六迚制数，表示第1号源文件到第N号源文件的特征值。（十六迚制数中的字母采取小写，丌足两位的在前面补零。亦即C/C++中使用”%02x”输出的格式。）​ 以下$(N - 1)$行，每行两个整数，给出树上的一条边所连接的两个顶点。【输出格式】​ 一行两个整数。依次为，选择的链的最小数目、编译的最小代价。两个数均以十迚制形式输出。【样例输入1】 1234301 02 0f1 21 3 【样例输出1】 12 16 说明：最优方案为(1, 3), (2)。【样例输入2】 1234565d1 33 f0 ab 671 21 32 42 5 【样例输出2】 13 288 说明：最优方案为$(1, 3), (2, 4), (5)$或$(1, 3), (2, 5), (4)$。【数据范围】$0 ≤ N ≤ 20,000$。 简要做法一个背包树形DP 代码1234567891011121314151617181920212223242526272829303132333435363738394041424344454647484950515253545556575859606162636465666768697071727374757677787980//树形动规 #include &lt;cstdio&gt;#include &lt;cstring&gt;#include &lt;iostream&gt;#include &lt;algorithm&gt;#define maxn 20010//#define 02using namespace std;int ans,fir[maxn],ne[maxn*2],v[maxn],w[maxn],cnt;int n,tot,dp[maxn][260],mini[maxn];inline void add(int fro,int to)&#123; ne[++cnt] = fir[fro]; fir[fro] = cnt; v[cnt] = to;&#125;void dfs(int cur,int fa)&#123; if(v[fir[cur]] == fa &amp;&amp; ne[fir[cur]] == -1) &#123; dp[cur][w[cur]] = 0; tot++; return; &#125; int sum = 0; for(int i = fir[cur];i != -1;i = ne[i]) &#123; if(v[i] != fa) &#123; dfs(v[i],cur); for(int j = 0;j &lt;= 255;j++) mini[v[i]] = min(mini[v[i]],dp[v[i]][j]+j); sum += mini[v[i]]; &#125; &#125; for(int i = fir[cur];i != -1;i = ne[i]) &#123; if(v[i] != fa) &#123; for(int j = 0;j &lt;= 255;j++) &#123; dp[cur][j^w[cur]] = min(dp[cur][j^w[cur]],sum - mini[v[i]] + dp[v[i]][j]); &#125; &#125; &#125;&#125;int main()&#123;// freopen("compiler.in","r",stdin);// froepen("compiler.out","w",stdout); memset(ne,-1,sizeof(ne)); memset(fir,-1,sizeof(fir)); memset(dp,0x3f,sizeof(dp)); memset(mini,0x3f,sizeof(mini)); scanf("%d",&amp;n); for(int i = 1;i &lt;= n;i++) &#123; scanf("%02x",w + i); &#125; for(int i = 1,x,y;i &lt; n;i++) &#123; scanf("%d %d",&amp;x,&amp;y); add(x,y); add(y,x); &#125; //叶子节点的个数就是最少链的个数，深搜解决。。 dfs(1,0); ans = 0x3f3f3f3f; for(int i = 0;i &lt;= 255;i++) &#123; ans = min(ans,dp[1][i] + i); &#125; printf("%d %d\n",tot,ans); return 0;&#125;]]></content>
+      <categories>
+        <category>题解</category>
+      </categories>
+      <tags>
+        <tag>题解</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[线段树学习笔记]]></title>
     <url>%2F2019%2F07%2F23%2F%E7%BA%BF%E6%AE%B5%E6%A0%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%2F</url>
     <content type="text"><![CDATA[题目链接 问题简述简要做法代码]]></content>
