@@ -109,19 +109,19 @@
 
 
 
-  <meta name="description" content="一个多项式A(x) = \displaystyle\sum_{i=1}^{n-1} = a_0+a_1x+a_2x^2+\dots +a_{n-1}x^{n-1}">
+  <meta name="description" content="一个多项式$$A(x) = \displaystyle\sum_{i=1}^{n-1} = a_0+a_1x+a_2x^2+\dots +a_{n-1}x^{n-1}$$">
 <meta name="keywords" content="笔记">
 <meta property="og:type" content="article">
 <meta property="og:title" content="FFT笔记">
 <meta property="og:url" content="https://wknclizu.github.io/2019/10/17/FFT笔记/index.html">
 <meta property="og:site_name" content="wknclizu的博客">
-<meta property="og:description" content="一个多项式A(x) = \displaystyle\sum_{i=1}^{n-1} = a_0+a_1x+a_2x^2+\dots +a_{n-1}x^{n-1}">
+<meta property="og:description" content="一个多项式$$A(x) = \displaystyle\sum_{i=1}^{n-1} = a_0+a_1x+a_2x^2+\dots +a_{n-1}x^{n-1}$$">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="https://cdn.luogu.com.cn/upload/pic/29484.png">
-<meta property="og:updated_time" content="2019-10-17T09:09:29.900Z">
+<meta property="og:updated_time" content="2019-10-20T00:52:46.201Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="FFT笔记">
-<meta name="twitter:description" content="一个多项式A(x) = \displaystyle\sum_{i=1}^{n-1} = a_0+a_1x+a_2x^2+\dots +a_{n-1}x^{n-1}">
+<meta name="twitter:description" content="一个多项式$$A(x) = \displaystyle\sum_{i=1}^{n-1} = a_0+a_1x+a_2x^2+\dots +a_{n-1}x^{n-1}$$">
 <meta name="twitter:image" content="https://cdn.luogu.com.cn/upload/pic/29484.png">
 
 
@@ -497,16 +497,20 @@
       
 
       
-        <h4 id="一个多项式"><a href="#一个多项式" class="headerlink" title="一个多项式"></a>一个多项式</h4><script type="math/tex; mode=display">A(x) = \displaystyle\sum_{i=1}^{n-1} = a_0+a_1x+a_2x^2+\dots +a_{n-1}x^{n-1}</script><a id="more"></a>
+        <h4 id="一个多项式"><a href="#一个多项式" class="headerlink" title="一个多项式"></a>一个多项式</h4><p>$$A(x) = \displaystyle\sum_{i=1}^{n-1} = a_0+a_1x+a_2x^2+\dots +a_{n-1}x^{n-1}$$</p>
+<a id="more"></a>
+
 <h4 id="多项式乘法"><a href="#多项式乘法" class="headerlink" title="多项式乘法"></a>多项式乘法</h4><p>定义两个多项式$A(x),B(x)$相乘结果为$C(X)$，则</p>
-<script type="math/tex; mode=display">C(x)=A(x)\times B(x) = \displaystyle\sum_{k=0}^{2n-2}(\sum_{k=i+j}a_i b_j)x^k</script><p>时间复杂度为$O(n^2)$</p>
+<p>$$C(x)=A(x)\times B(x) = \displaystyle\sum_{k=0}^{2n-2}(\sum_{k=i+j}a_i b_j)x^k$$</p>
+<p>时间复杂度为$O(n^2)$</p>
 <p>但是如果用$A(x),B(x)$在$2n-1$个点取得的点值表示，则有</p>
-<script type="math/tex; mode=display">y_{Ci} = (\displaystyle\sum_{j=0}^{2n-1}a_j x_i^j)\times(\sum_{j=0}^{2n-1}b_jx_i^j) = y_{Ai}\times y_{Bi}</script><p>时间复杂度似乎为$O(n)$</p>
+<p>$$y_{Ci} = (\displaystyle\sum_{j=0}^{2n-1}a_j x_i^j)\times(\sum_{j=0}^{2n-1}b_jx_i^j) = y_{Ai}\times y_{Bi}$$</p>
+<p>时间复杂度似乎为$O(n)$</p>
 <h4 id="复数"><a href="#复数" class="headerlink" title="复数"></a>复数</h4><p>可以类比一下矢量</p>
 <p>$a,b$ 为实数，$i^2=-1$ 则形如$a+bi$的数叫做复数。<strong>复数域是已知最大的域</strong></p>
 <p><strong>模长</strong>$d=\sqrt{a^2+b^2}$，表示从$x$轴正半轴到该向量的转角的有向（以逆时针为正方向）角叫做<strong>幅角</strong>。 </p>
 <p><strong>相加时遵循平行四边形法则</strong></p>
-<p> <strong>复数相乘时，模长相乘，幅角相加。 </strong></p>
+<p> *<em>复数相乘时，模长相乘，幅角相加。 *</em></p>
 <h4 id="单位根"><a href="#单位根" class="headerlink" title="单位根"></a>单位根</h4><p>就是方程$x^n =1$的复数解（图片来自<a href="https://www.luogu.org/blog/command-block/fft-xue-xi-bi-ji" target="_blank" rel="noopener">command_block</a></p>
 <p> 在复平面上，以原点为圆心，$1$为半径作圆，所得的圆叫做单位圆。以原点为起点，单位圆的$n$等分点为终点，作$n$个向量。设所得的<strong>幅角为正且最小</strong>的向量对应的复数为$w_n$，称为$n$次单位根。 </p>
 <p><img src="https://cdn.luogu.com.cn/upload/pic/29484.png" alt="img"></p>
@@ -521,53 +525,74 @@
 <h4 id="快速傅里叶变换"><a href="#快速傅里叶变换" class="headerlink" title="快速傅里叶变换"></a>快速傅里叶变换</h4><p><strong>一个约定</strong>：若无特别说明以下讨论皆保证<strong>$n$是$2$的正整数次幂</strong></p>
 <p>求$A(x)=(a_0+a_2x^2+a_4x^4+\dots+a_{n-2}x^{n-2})+(a_1x+a_3x^3+a_5x^5+\dots+a_{n-1}x^{n-1})$</p>
 <p>令</p>
-<script type="math/tex; mode=display">A_1(x)=a_0+a_2x+a_4x^2+\dots+a_{n-2}x^{\frac{n}{2}-1}</script><script type="math/tex; mode=display">A_2(x)=a_1+a_3x+a_5x^2+\dots+a_{n-1}x^{\frac{n}{2}-1}</script><p>则有</p>
-<script type="math/tex; mode=display">A(x) = A_1(x^2)+xA_2(x^2)</script><ul>
+<p>$$A_1(x)=a_0+a_2x+a_4x^2+\dots+a_{n-2}x^{\frac{n}{2}-1}$$</p>
+<p>$$A_2(x)=a_1+a_3x+a_5x^2+\dots+a_{n-1}x^{\frac{n}{2}-1}$$</p>
+<p>则有</p>
+<p>$$A(x) = A_1(x^2)+xA_2(x^2)$$</p>
+<ul>
 <li><p>假设$k&lt;\frac{n}{2}$将$w_n^k$带入$A(x)$，则有</p>
-<script type="math/tex; mode=display">A(w_n^k) = A_1(w_n^{2k})+w_n^kA_2(w_n^{2k}) = A_1(w_{n/2}^{k})+w_n^kA_2(w_{n/2}^{k})</script></li>
+<p>$$A(w_n^k) = A_1(w_n^{2k})+w_n^kA_2(w_n^{2k}) = A_1(w_{n/2}^{k})+w_n^kA_2(w_{n/2}^{k})$$</p>
+</li>
 <li><p>对于$A(w_n^{k+n/2})$</p>
-<script type="math/tex; mode=display">\begin{aligned} A(\omega_n^{k+\frac n2})&=A_1(\omega_n^{2k+n})+\omega_n^{k+\frac n2}A_2(\omega_n^{2k+n}) \\ &=A_1(\omega_n^{2k}\times\omega_n^n)-\omega_n^kA_2(\omega_n^{2k}\times\omega_n^n) \\ &=A_1(\omega_n^{2k})-\omega_n^kA_2(\omega_n^{2k}) \\ &=A_1(\omega_{\frac{n}{2}}^k)-\omega_n^kA_2(\omega_{\frac n2}^k) \\ \end{aligned}</script></li>
+<p>$$\begin{aligned} A(\omega_n^{k+\frac n2})&amp;=A_1(\omega_n^{2k+n})+\omega_n^{k+\frac n2}A_2(\omega_n^{2k+n}) \ &amp;=A_1(\omega_n^{2k}\times\omega_n^n)-\omega_n^kA_2(\omega_n^{2k}\times\omega_n^n) \ &amp;=A_1(\omega_n^{2k})-\omega_n^kA_2(\omega_n^{2k}) \ &amp;=A_1(\omega_{\frac{n}{2}}^k)-\omega_n^kA_2(\omega_{\frac n2}^k) \ \end{aligned}$$</p>
+</li>
 </ul>
 <p>本处利用了单位根的消去引理与折半引理。</p>
 <p>注意在$k$取遍$[0,\frac{n}{2}-1]$时，$k$和$k+\frac{n}{2}$取遍了$[0,n-1]$，也就是说，如果知道$A_1(x)$和$A_2(x)$在$\omega_{n/2}^0,\omega_{n/2}^1,\omega_{n/2}^3,\dots,\omega_{n/2}^{n-1}$处的取值，就可以在$O(n)$的时间求得$A(x)$在$\omega_n^0,\omega_n^1,\dots,\omega_n^{n-1}$处的值。</p>
 <p>根据主定理，该分治算法的时间复杂度为</p>
-<script type="math/tex; mode=display">T(n) = 2T(\frac{n}{2})+O(n) = O(nlogn)</script><p>这就是所谓的$Cooley-Tukey$算法，<del>认真看完发现还挺简单的</del></p>
+<p>$$T(n) = 2T(\frac{n}{2})+O(n) = O(nlogn)$$</p>
+<p>这就是所谓的$Cooley-Tukey$算法，<del>认真看完发现还挺简单的</del></p>
 <p>总结一下</p>
 <p>FFT分治的过程就是根据</p>
-<script type="math/tex; mode=display">A(\omega_n^k) = A_1(\omega_{n/2}^k)+\omega_n^kA_2(\omega_{n/2}^{k})</script><script type="math/tex; mode=display">A(\omega_n^{k+n/2}) = A_1(\omega_{n/2}^k)-\omega _n^kA_2(\omega_{n/2}^k)</script><p>实现了子问题的合并</p>
+<p>$$A(\omega_n^k) = A_1(\omega_{n/2}^k)+\omega_n^kA_2(\omega_{n/2}^{k})$$</p>
+<p>$$A(\omega_n^{k+n/2}) = A_1(\omega_{n/2}^k)-\omega <em>n^kA_2(\omega</em>{n/2}^k)$$</p>
+<p>实现了子问题的合并</p>
 <p>还记得一开始说的$n$是$2$的正整数次幂吗，这样就可以保证不会出现分得不均匀的情况，但在实际中$n$不一定是$2$得正整数次幂，对于这种情况我们可以在最高次强行加一些系数为$0$的项，具体细节看代码吧。。。</p>
 <p>首先是关于复数的加减，可以用结构体封装一下，<strong>以下代码皆来自<a href="https://www.luogu.org/blog/command-block/fft-xue-xi-bi-ji" target="_blank" rel="noopener">command-block</a></strong>，<del>因为我太懒了</del></p>
 <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">complex</span></span></span><br><span class="line"><span class="class">&#123;</span><span class="keyword">complex</span> (<span class="keyword">double</span> xx=<span class="number">0</span>,<span class="keyword">double</span> yy=<span class="number">0</span>)&#123;x=xx,y=yy;&#125;</span><br><span class="line"><span class="keyword">double</span> x,y;&#125;;</span><br><span class="line"><span class="keyword">complex</span> <span class="keyword">operator</span> + (<span class="keyword">complex</span> a,<span class="keyword">complex</span> b)&#123;</span><br><span class="line">  <span class="keyword">return</span> <span class="keyword">complex</span>(a.x+b.x,a.y+b.y);</span><br><span class="line">&#125;<span class="keyword">complex</span> <span class="keyword">operator</span> - (<span class="keyword">complex</span> a,<span class="keyword">complex</span> b)&#123;</span><br><span class="line">  <span class="keyword">return</span> <span class="keyword">complex</span>(a.x-b.x,a.y-b.y);</span><br><span class="line">&#125;<span class="keyword">complex</span> <span class="keyword">operator</span> * (<span class="keyword">complex</span> a,<span class="keyword">complex</span> b)&#123;</span><br><span class="line">  <span class="keyword">return</span> <span class="keyword">complex</span>(a.x*b.x-a.y*b.y,a.x*b.y+a.y*b.x);</span><br><span class="line">&#125;<span class="keyword">complex</span> <span class="keyword">operator</span> / (<span class="keyword">complex</span> a,<span class="keyword">complex</span> b)&#123;</span><br><span class="line">  <span class="keyword">double</span> t=b.x*b.x+b.y*b.y;</span><br><span class="line">  <span class="keyword">return</span> <span class="keyword">complex</span>((a.x*b.x+a.y*b.y)/t,</span><br><span class="line">                 (a.y*b.x-a.x*b.y)/t);</span><br><span class="line">&#125;<span class="keyword">complex</span> a,b;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">  <span class="built_in">cin</span>&gt;&gt;a.x&gt;&gt;a.y&gt;&gt;b.x&gt;&gt;b.y;</span><br><span class="line">  <span class="keyword">complex</span> c;</span><br><span class="line">  c=a+b;</span><br><span class="line">  <span class="built_in">cout</span>&lt;&lt;<span class="string">'('</span>&lt;&lt;c.x&lt;&lt;<span class="string">','</span>&lt;&lt;c.y&lt;&lt;<span class="string">")\n"</span>;</span><br><span class="line">  c=a-b;</span><br><span class="line">  <span class="built_in">cout</span>&lt;&lt;<span class="string">'('</span>&lt;&lt;c.x&lt;&lt;<span class="string">','</span>&lt;&lt;c.y&lt;&lt;<span class="string">")\n"</span>;</span><br><span class="line">  c=a*b;</span><br><span class="line">  <span class="built_in">cout</span>&lt;&lt;<span class="string">'('</span>&lt;&lt;c.x&lt;&lt;<span class="string">','</span>&lt;&lt;c.y&lt;&lt;<span class="string">")\n"</span>;</span><br><span class="line">  c=a/b;</span><br><span class="line">  <span class="built_in">cout</span>&lt;&lt;<span class="string">'('</span>&lt;&lt;c.x&lt;&lt;<span class="string">','</span>&lt;&lt;c.y&lt;&lt;<span class="string">")\n"</span>;</span><br><span class="line">  <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
 <p>接下来是关于单位根的求法</p>
 <p>上文提到$w_n^k = cos\ k\frac{2\pi}{n}+i\ sin\ k\frac{2\pi}{n}$，所以$\omega_n^1$的坐标为$(cos(\frac{2\pi}{n}),sin(\frac{2\pi}{n}))$，所以只需要求出$\omega_n^1$然后将它乘以$i$次就可以得到$\omega_n^{i}$的值</p>
 <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cstdio&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cmath&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> Maxn 1000500</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> Pi 3.1415926535898</span></span><br><span class="line"><span class="comment">//π要背好</span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">complex</span></span></span><br><span class="line"><span class="class">&#123;</span><span class="keyword">complex</span> (<span class="keyword">double</span> xx=<span class="number">0</span>,<span class="keyword">double</span> yy=<span class="number">0</span>)&#123;x=xx,y=yy;&#125;</span><br><span class="line"><span class="keyword">double</span> x,y;&#125;;</span><br><span class="line"><span class="keyword">complex</span> <span class="keyword">operator</span> + (<span class="keyword">complex</span> a,<span class="keyword">complex</span> b)&#123;</span><br><span class="line">  <span class="keyword">return</span> <span class="keyword">complex</span>(a.x+b.x,a.y+b.y);</span><br><span class="line">&#125;<span class="keyword">complex</span> <span class="keyword">operator</span> - (<span class="keyword">complex</span> a,<span class="keyword">complex</span> b)&#123;</span><br><span class="line">  <span class="keyword">return</span> <span class="keyword">complex</span>(a.x-b.x,a.y-b.y);</span><br><span class="line">&#125;<span class="keyword">complex</span> <span class="keyword">operator</span> * (<span class="keyword">complex</span> a,<span class="keyword">complex</span> b)&#123;</span><br><span class="line">  <span class="keyword">return</span> <span class="keyword">complex</span>(a.x*b.x-a.y*b.y,a.x*b.y+a.y*b.x);</span><br><span class="line">&#125;<span class="keyword">complex</span> <span class="keyword">operator</span> / (<span class="keyword">complex</span> a,<span class="keyword">complex</span> b)&#123;</span><br><span class="line">  <span class="keyword">double</span> t=b.x*b.x+b.y*b.y;</span><br><span class="line">  <span class="keyword">return</span> <span class="keyword">complex</span>((a.x*b.x+a.y*b.y)/t,</span><br><span class="line">                 (a.y*b.x-a.x*b.y)/t);</span><br><span class="line">&#125;<span class="keyword">complex</span> w[Maxn],tmp,buf;</span><br><span class="line"><span class="comment">//w长得是不是很像ω？</span></span><br><span class="line"><span class="keyword">int</span> n;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">  <span class="built_in">scanf</span>(<span class="string">"%d"</span>,&amp;n);</span><br><span class="line">  tmp.x=<span class="built_in">cos</span>(<span class="number">2</span>*Pi/n);tmp.y=<span class="built_in">sin</span>(<span class="number">2</span>*Pi/n);</span><br><span class="line">  w[<span class="number">0</span>].x=<span class="number">1</span>;w[<span class="number">0</span>].y=<span class="number">0</span>;</span><br><span class="line">  <span class="comment">//0次方特判</span></span><br><span class="line">  buf.x=<span class="number">1</span>;buf.y=<span class="number">0</span>;</span><br><span class="line">  <span class="comment">//初始值赋为1</span></span><br><span class="line">  <span class="keyword">for</span> (<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;n;i++)&#123;</span><br><span class="line">    buf=buf*tmp;</span><br><span class="line">    w[i]=buf;</span><br><span class="line">  &#125;<span class="keyword">for</span> (<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;n;i++)</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"ω[%d][n]=(%.8lf,%.8lf)\n"</span>,i,w[i].x,w[i].y);</span><br><span class="line">  <span class="comment">//由于精度不够会出现-0.00000000的情况，将就看吧</span></span><br><span class="line">  <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
 <h4 id="傅里叶逆变换"><a href="#傅里叶逆变换" class="headerlink" title="傅里叶逆变换"></a>傅里叶逆变换</h4><p>在上面的过程中我们用<strong>点值</strong>表示了一个多项式，但是在平常学习中我们一般都用的<strong>系数</strong>来表示一个多项式， 所以我们要考虑如何把点值表示法转换为系数表示法，这个过程叫做<strong>傅里叶逆变换</strong> </p>
 <p>设$(y_0,y_1,y_2,\ldots,y_{n-1})$为$(a_0,a_1,a_2,\ldots,a_{n-1})$的离散傅里叶变换。考虑另一个向量$(c_0,c_1,c_2,\ldots,c_{n-1})$满足：</p>
-<script type="math/tex; mode=display">c_k=\displaystyle\sum_{i=0}^{n-1}y_i(\omega_n^{-k})^i</script><p>即多项式$B(x)=y_0+y_1x+y_2x^2+\cdots+y_{n-1}x^{n-1}$为在$\omega_n^0,\omega_n^{-1},\omega_n^{-2},\ldots,\omega_n^{-(n-1)}$处的点值表示。</p>
+<p>$$c_k=\displaystyle\sum_{i=0}^{n-1}y_i(\omega_n^{-k})^i$$</p>
+<p>即多项式$B(x)=y_0+y_1x+y_2x^2+\cdots+y_{n-1}x^{n-1}$为在$\omega_n^0,\omega_n^{-1},\omega_n^{-2},\ldots,\omega_n^{-(n-1)}$处的点值表示。</p>
 <p>将上式展开，得：</p>
-<script type="math/tex; mode=display">\begin{aligned} c_k&=\sum_{i=0}^{n-1}y_i(\omega_n^{-k})^i \\ &=\sum_{i=0}^{n-1}(\sum_{j=0}^{n-1}a_j(\omega_n^i)^j)(\omega_n^{-k})^i \\ &=\sum_{i=0}^{n-1}(\sum_{j=0}^{n-1}a_j(\omega_n^j)^i)(\omega_n^{-k})^i \\ &=\sum_{i=0}^{n-1}(\sum_{j=0}^{n-1}a_j(\omega_n^j)^i(\omega_n^{-k})^i) \\ &=\sum_{i=0}^{n-1}\sum_{j=0}^{n-1}a_j(\omega_n^{j-k})^i \\ &=\sum_{j=0}^{n-1}a_j(\sum_{i=0}^{n-1}(\omega_n^{j-k})^i) \end{aligned}</script><ul>
+<p>$$\begin{aligned} c_k&amp;=\sum_{i=0}^{n-1}y_i(\omega_n^{-k})^i \ &amp;=\sum_{i=0}^{n-1}(\sum_{j=0}^{n-1}a_j(\omega_n^i)^j)(\omega_n^{-k})^i \ &amp;=\sum_{i=0}^{n-1}(\sum_{j=0}^{n-1}a_j(\omega_n^j)^i)(\omega_n^{-k})^i \ &amp;=\sum_{i=0}^{n-1}(\sum_{j=0}^{n-1}a_j(\omega_n^j)^i(\omega_n^{-k})^i) \ &amp;=\sum_{i=0}^{n-1}\sum_{j=0}^{n-1}a_j(\omega_n^{j-k})^i \ &amp;=\sum_{j=0}^{n-1}a_j(\sum_{i=0}^{n-1}(\omega_n^{j-k})^i) \end{aligned}$$</p>
+<ul>
 <li><p>以下是$Menci$的推导：</p>
-<p>根据单位根的求和引理，我们可知$\sum\limits_{i=0}^{n-1}(\omega_n^{j-k})^i$在$j≠k$时为0，但总有一次且仅有一次会出现$j=k$，当$j=k$时$\sum\limits_{i=0}^{n-1}(\omega_n^0)^i=n$.</p>
+<p>根据单位根的求和引理，我们可知$\sum\limits_{i=0}^{n-1}(\omega_n^{j-k})^i$在$j\neq k$时为0，但总有一次且仅有一次会出现$j=k$，当$j=k$时$\sum\limits_{i=0}^{n-1}(\omega_n^0)^i=n$.</p>
 <p>故$c_k=na_k$。<br>因此$a_i=\frac1n c_i$。</p>
 </li>
 <li><p>以下是$zwfymqz$的推导：</p>
-<p>设$S(x)=\sum_{i=0}^{n-1}x^i$，将$\omega_n^k$代入得</p>
-<script type="math/tex; mode=display">S(\omega_n^k)=1+(\omega_n^k)+(\omega_n^k)^2+\dots(\omega_n^k)^{n-1}</script><p>当$k\neq 0$时，等式两边同乘$\omega_n^k$得</p>
-<script type="math/tex; mode=display">\omega_n^kS(\omega_n^k)=\omega_n^k+(\omega_n^k)^2+(\omega_n^k)^3+\dots(\omega_n^k)^{n}</script><p>两式相减得</p>
-<script type="math/tex; mode=display">\omega_n^kS(\omega_n^k)-S(\omega_n^k)=(\omega_n^k)^{n}-1</script><script type="math/tex; mode=display">S(\omega_n^k)=\frac{(\omega_n^k)^{n}-1}{\omega_n^k-1}</script><script type="math/tex; mode=display">S(\omega_n^k)=\frac{(\omega_n^n)^{k}-1}{\omega_n^k-1}</script><script type="math/tex; mode=display">S(\omega_n^k)=\frac{1-1}{\omega_n^k-1}</script><p>所以当$k\neq 0$时，$S(\omega_n^k) = 0$</p>
+<p>设$S(x)=\sum\limits _{i=0}^{n-1}x^i$，将$\omega_n^k$代入得</p>
+<p>$$S(\omega_n^k)=1+(\omega_n^k)+(\omega_n^k)^2+\dots(\omega_n^k)^{n-1}$$</p>
+<p>当$k\neq 0$时，等式两边同乘$\omega_n^k$得</p>
+<p>$$\omega_n^kS(\omega_n^k)=\omega_n^k+(\omega_n^k)^2+(\omega_n^k)^3+\dots(\omega_n^k)^{n}$$</p>
+<p>两式相减得</p>
+<p>$$\omega_n^kS(\omega_n^k)-S(\omega_n^k)=(\omega_n^k)^{n}-1$$</p>
+<p>$$S(\omega_n^k)=\frac{(\omega_n^k)^{n}-1}{\omega_n^k-1}$$</p>
+<p>$$S(\omega_n^k)=\frac{(\omega_n^n)^{k}-1}{\omega_n^k-1}$$</p>
+<p>$$S(\omega_n^k)=\frac{1-1}{\omega_n^k-1}$$</p>
+<p>所以当$k\neq 0$时，$S(\omega_n^k) = 0$</p>
 <p>当$k=0$时，$S(\omega_n^0) = n$</p>
 <p>继续考虑刚刚的式子</p>
-<script type="math/tex; mode=display">c_k=\displaystyle \sum_{j=0}^{n-1}a_j(\sum_{i=0}^{n-1}(\omega_n^{j-k})^i)</script><p>当$j\neq k$时，$c_k = 0$</p>
+<p>$$c_k=\displaystyle \sum_{j=0}^{n-1}a_j(\sum_{i=0}^{n-1}(\omega_n^{j-k})^i)$$</p>
+<p>当$j\neq k$时，$c_k = 0$</p>
 <p>当$j = k$时，$c_k = n$</p>
 <p>因此</p>
-<script type="math/tex; mode=display">c_k = na_k</script><script type="math/tex; mode=display">a_k = \frac{c_k}{n}</script></li>
+<p>$$c_k = na_k$$</p>
+<p>$$a_k = \frac{c_k}{n}$$</p>
+</li>
 </ul>
 <p><strong>总结</strong></p>
 <p>所以在傅里叶逆变换时，只需要用单位根的倒数代替单位根，做一次类似快速傅里叶变换的过程，再将结果每个数除以$n$，即为傅里叶逆变换的结果。 </p>
-<h4 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h4><p><a href="https://oi.men.ci/fft-notes/" target="_blank" rel="noopener">Menci FFt学习笔记</a></p>
+<h4 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h4><p><a href="https://oi.men.ci/fft-notes/" target="_blank" rel="noopener">Menci FFT学习笔记</a></p>
 <p><a href="https://blog.bill.moe/fast-fourier-transform-notes/" target="_blank" rel="noopener">Bill yang快速傅里叶变换（FFT）与多项式乘法学习笔记 </a></p>
 <p><a href="https://www.luogu.org/blog/command-block/fft-xue-xi-bi-ji" target="_blank" rel="noopener">command_block傅里叶变换(FFT)学习笔记</a></p>
-<p><a href="https://www.cnblogs.com/zwfymqz/p/8244902.html" target="_blank" rel="noopener">zwfymqz</a></p>
+<p><a href="https://www.cnblogs.com/zwfymqz/p/8244902.html" target="_blank" rel="noopener">zwfymqz</a> </p>
 
       
     </div>

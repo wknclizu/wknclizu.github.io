@@ -109,19 +109,19 @@
 
 
 
-  <meta name="description" content="其实主要是欧拉函数和欧拉定理 费马小定理定理​    对于任意质数 $ p $ 和正整数 $ a &amp;lt; p $ ,有$ a^{p-1}\equiv1\pmod p $ 证明​    易证 $ a,2a,3a,4a,….,(p-1)a    (mod\ p) $ 可以取遍$ 1 $ 到 $p-1 $之间的所有数（可用反证法证明） ​    于是 $a  2a  3a…*(p-1)a\equiv">
+  <meta name="description" content="其实主要是欧拉函数和欧拉定理 费马小定理定理​    对于任意质数 $ p $ 和正整数 $ a &amp;lt; p $ ,有$ a^{p-1}\equiv1\pmod p $ 证明​    易证 $ a,2a,3a,4a,….,(p-1)a    (mod\ p) $ 可以取遍$ 1 $ 到 $p-1 $之间的所有数（可用反证法证明） ​    于是 $a \times 2a \times 3a \t">
 <meta name="keywords" content="笔记">
 <meta property="og:type" content="article">
 <meta property="og:title" content="数论">
 <meta property="og:url" content="https://wknclizu.github.io/2019/07/10/数论/index.html">
 <meta property="og:site_name" content="wknclizu的博客">
-<meta property="og:description" content="其实主要是欧拉函数和欧拉定理 费马小定理定理​    对于任意质数 $ p $ 和正整数 $ a &amp;lt; p $ ,有$ a^{p-1}\equiv1\pmod p $ 证明​    易证 $ a,2a,3a,4a,….,(p-1)a    (mod\ p) $ 可以取遍$ 1 $ 到 $p-1 $之间的所有数（可用反证法证明） ​    于是 $a  2a  3a…*(p-1)a\equiv">
+<meta property="og:description" content="其实主要是欧拉函数和欧拉定理 费马小定理定理​    对于任意质数 $ p $ 和正整数 $ a &amp;lt; p $ ,有$ a^{p-1}\equiv1\pmod p $ 证明​    易证 $ a,2a,3a,4a,….,(p-1)a    (mod\ p) $ 可以取遍$ 1 $ 到 $p-1 $之间的所有数（可用反证法证明） ​    于是 $a \times 2a \times 3a \t">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="https://i.loli.net/2019/07/21/5d3458c7878c098961.jpg">
-<meta property="og:updated_time" content="2019-10-17T09:10:46.485Z">
+<meta property="og:updated_time" content="2019-10-19T12:50:40.516Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="数论">
-<meta name="twitter:description" content="其实主要是欧拉函数和欧拉定理 费马小定理定理​    对于任意质数 $ p $ 和正整数 $ a &amp;lt; p $ ,有$ a^{p-1}\equiv1\pmod p $ 证明​    易证 $ a,2a,3a,4a,….,(p-1)a    (mod\ p) $ 可以取遍$ 1 $ 到 $p-1 $之间的所有数（可用反证法证明） ​    于是 $a  2a  3a…*(p-1)a\equiv">
+<meta name="twitter:description" content="其实主要是欧拉函数和欧拉定理 费马小定理定理​    对于任意质数 $ p $ 和正整数 $ a &amp;lt; p $ ,有$ a^{p-1}\equiv1\pmod p $ 证明​    易证 $ a,2a,3a,4a,….,(p-1)a    (mod\ p) $ 可以取遍$ 1 $ 到 $p-1 $之间的所有数（可用反证法证明） ​    于是 $a \times 2a \times 3a \t">
 <meta name="twitter:image" content="https://i.loli.net/2019/07/21/5d3458c7878c098961.jpg">
 
 
@@ -500,10 +500,11 @@
         <p>其实主要是欧拉函数和欧拉定理</p>
 <h2 id="费马小定理"><a href="#费马小定理" class="headerlink" title="费马小定理"></a>费马小定理</h2><h3 id="定理"><a href="#定理" class="headerlink" title="定理"></a>定理</h3><p>​    对于任意质数 $ p $ 和正整数 $ a &lt; p $ ,有$ a^{p-1}\equiv1\pmod p $</p>
 <h3 id="证明"><a href="#证明" class="headerlink" title="证明"></a>证明</h3><p>​    易证 $ a,2a,3a,4a,….,(p-1)a    (mod\ p) $ 可以取遍$ 1 $ 到 $p-1 $之间的所有数（可用反证法证明）</p>
-<p>​    于是 $a <em> 2a </em> 3a…*(p-1)a\equiv (p-1)! (mod \ p)$</p>
+<p>​    于是 $a \times 2a \times 3a \times \dots \times (p-1)a\equiv (p-1)! (mod \ p)$</p>
 <p>​    由于$ p $ 是素数，和$ 1 \to p-1$ 之间的所有数都互素，所以等式两边可以同时除以$ (p-1)! $</p>
 <p>​    就得到了$ a^{p-1} \equiv 1 (mod \ p) $ </p>
 <a id="more"></a>
+
 <h2 id="中国剩余定理-CRT"><a href="#中国剩余定理-CRT" class="headerlink" title="中国剩余定理(CRT)"></a>中国剩余定理(CRT)</h2><ul>
 <li>求解关于$ x $的方程组$ x \equiv a_i (mod\ m_i)(1\le i \le n)$，$ m_i$两两互质</li>
 </ul>
@@ -525,31 +526,41 @@
 <h3 id="内容"><a href="#内容" class="headerlink" title="内容"></a>内容</h3><p>​    欧拉函数$ \varphi(m)  $表示不超过$m$且与$m$互质的数的个数，特别的 $ \varphi(1) = 1 $</p>
 <p>​    eg :  因为$1,3,5,7$均和$8$互质，所以$\varphi(8)=4$。</p>
 <h3 id="计算"><a href="#计算" class="headerlink" title="计算"></a>计算</h3><p>​    给出$m$的唯一分解式（其中$p_i$为质数）</p>
-<p>​    <script type="math/tex">m = \prod p_i^{a_i}</script></p>
-<script type="math/tex; mode=display">\varphi(m) = m\prod(1- \frac 1{p_i})</script><h3 id="证明-1"><a href="#证明-1" class="headerlink" title="证明"></a>证明</h3><p>​    欧拉函数的证明有很多方法，其中相对较好理解的应该是用容斥原理证明（摘自紫书）</p>
+<p>​    $$ m = \prod p_i^{a_i} $$</p>
+<p>$$ \varphi(m) = m\prod(1- \frac 1{p_i}) $$</p>
+<h3 id="证明-1"><a href="#证明-1" class="headerlink" title="证明"></a>证明</h3><p>​    欧拉函数的证明有很多方法，其中相对较好理解的应该是用容斥原理证明（摘自紫书）</p>
 <p>​    首先从总数$n$中减去分别是$p_1,p_2,p_3,…,p_k$的倍数的个数，即$n-\frac n{p_1}-\frac n{p_2}-…-\frac n{p_k}$，然后加上<strong>同时是两个素因子的倍数</strong>的个数$\frac n{p_1p_2}+\frac n{p_1p_3}+…+\frac n{p_{k-1}p_k}$，再<strong>减去</strong>同时是三个素因子的倍数……（<a href="https://baike.baidu.com/item/%E5%AE%B9%E6%96%A5%E5%8E%9F%E7%90%86/10146840?fr=aladdin" target="_blank" rel="noopener">容斥原理</a>），写成公式就是<del>（好难打）</del></p>
-<script type="math/tex; mode=display">\varphi(n) = \displaystyle \sum_{S\subseteq \{ p_1,p_2 ,...,p_k\}}(-1)^{|S|} \frac n{\displaystyle\prod_{p_i\in S}p_i}</script><p>这里的$ \varphi(m)$就是要求的结果，关于$(-1)^{|S|} \frac n{\displaystyle\prod_{p_i\in S}p_i}$ 前是加号还是减号取决于$S$中元素的个数（也就是$|S|$），奇数个就是减号，偶数个就是加号。</p>
+<p>$$ \varphi(n) = \displaystyle \sum_{S\subseteq { p_1,p_2 ,…,p_k}}(-1)^{|S|} \frac n{\displaystyle\prod_{p_i\in S}p_i}$$</p>
+<p>这里的$ \varphi(m)$就是要求的结果，关于$(-1)^{|S|} \frac n{\displaystyle\prod_{p_i\in S}p_i}$ 前是加号还是减号取决于$S$中元素的个数（也就是$|S|$），奇数个就是减号，偶数个就是加号。</p>
 <p>​    但这样子用起来会很不方便，如果直接套用这个公式时间复杂度可能比暴力还高吗，所以可以进行一步<del>并不显然的变形</del></p>
-<script type="math/tex; mode=display">\varphi(n) = n(1-\frac 1{p_1})(1-\frac 1{p_2})...(1-\frac 1{p_i})</script><p>​    从而只需要$O(k)$的时间就可以求出答案，从而大大提高了效率，所以求一个数$n$的欧拉函数就可以自然而然得得出来</p>
+<p>$$ \varphi(n) = n(1-\frac 1{p_1})(1-\frac 1{p_2})…(1-\frac 1{p_i})$$</p>
+<p>​    从而只需要$O(k)$的时间就可以求出答案，从而大大提高了效率，所以求一个数$n$的欧拉函数就可以自然而然得得出来</p>
 <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">euler</span><span class="params">(<span class="keyword">int</span> n)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> m = (<span class="keyword">int</span>)<span class="built_in">sqrt</span>(n+<span class="number">0.5</span>),ans = n;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">2</span>;i &lt;= m;i++)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">if</span>(n % i == <span class="number">0</span>)</span><br><span class="line">        &#123;</span><br><span class="line">            ans = ans / i * (i - <span class="number">1</span>);</span><br><span class="line">            <span class="keyword">while</span>(n % i == <span class="number">0</span>)</span><br><span class="line">                n/=i;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">//特判质数</span></span><br><span class="line">    <span class="keyword">if</span>(n &gt; <span class="number">1</span>)</span><br><span class="line">        ans = ans/n*(n<span class="number">-1</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
 <p>但是如果要求$1\sim n$中所有数的欧拉函数值就需要一点技巧了，时间复杂度为$ O(nloglogn) $，代码<a href="https://www.luogu.org/problemnew/solution/P2158" target="_blank" rel="noopener">摘自</a></p>
 <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">1</span>;i &lt;= n;++i)e[i] = i;</span><br><span class="line">       <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">2</span>;i &lt;= n;++i)</span><br><span class="line">       &#123;</span><br><span class="line">           <span class="keyword">if</span>(e[i] == i)</span><br><span class="line">           &#123;</span><br><span class="line">               <span class="keyword">for</span>(<span class="keyword">int</span> j = i;j &lt;= n;j+=i)</span><br><span class="line">               &#123;</span><br><span class="line">                   e[j] = e[j] / i * (i - <span class="number">1</span>);</span><br><span class="line">               &#125;</span><br><span class="line">           &#125;</span><br><span class="line">       &#125;</span><br></pre></td></tr></table></figure>
+
 <p>上面的方法用到了ai筛的思想所以时间复杂度和ai筛似乎差不多，那么有没有线性时间的做法呢，当然有啦，需要用到线性筛的思想，还需分为两类讨论即可，时间复杂度为$O(n)$，大家自行理解一下</p>
 <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">getphi</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    phi[i] = <span class="number">1</span>;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">2</span>;i &lt;= maxn;i++)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">if</span>(!vis[i])</span><br><span class="line">            pri[++tot] = i,phi = i - <span class="number">1</span>;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> j = <span class="number">1</span>,y;j &lt;= tot &amp;&amp; (y = pri[i]*j) &lt;= maxn;j++)</span><br><span class="line">        &#123;</span><br><span class="line">            vis[y] = <span class="number">1</span>;</span><br><span class="line">            phi[y] = (pri[j]<span class="number">-1</span>)*phi[i];<span class="comment">//互质</span></span><br><span class="line">            <span class="keyword">if</span>(i % pri == <span class="number">0</span>)</span><br><span class="line">            &#123;</span><br><span class="line">                phi[y] = phi[i]*pri[j];<span class="comment">//不互质</span></span><br><span class="line">                <span class="keyword">break</span>;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
 <h3 id="例题"><a href="#例题" class="headerlink" title="例题"></a>例题</h3><p><a href="https://www.luogu.org/problemnew/show/P2158" target="_blank" rel="noopener">SDOI2008</a></p>
 <p>​    很明显这是一道裸的欧拉函数题，<del>就是考你会不会欧拉函数的那种</del></p>
 <p>​    需要注意的一点是数据似乎有点大，<del>似乎</del>需要开$long\ long$，反正开了也不会少块肉对吧，不对在我重做以后发现需要特判$n = 1$的情况</p>
 <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cstdio&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> maxn 40005</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">int</span> a[maxn];</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">long</span> <span class="keyword">long</span> n;</span><br><span class="line">	<span class="built_in">scanf</span>(<span class="string">"%lld"</span>,&amp;n);</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">long</span> <span class="keyword">long</span> i = <span class="number">1</span>;i &lt;= n;i++)</span><br><span class="line">		a[i] = i;</span><br><span class="line">	<span class="keyword">if</span>(n == <span class="number">1</span>)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="built_in">printf</span>(<span class="string">"0\n"</span>);</span><br><span class="line">		<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">long</span> <span class="keyword">long</span> i = <span class="number">2</span>;i &lt;= n;i++)</span><br><span class="line">	&#123;</span><br><span class="line">	    <span class="keyword">if</span>(a[i] == i)</span><br><span class="line">	    &#123;</span><br><span class="line">    		<span class="keyword">for</span>(<span class="keyword">long</span> <span class="keyword">long</span> j = i;j &lt;= n;j += i)</span><br><span class="line">    		&#123;</span><br><span class="line">    			a[j] = a[j] / i * (i<span class="number">-1</span>);</span><br><span class="line">    		&#125;</span><br><span class="line">	    &#125;</span><br><span class="line">	&#125;</span><br><span class="line">	n--;</span><br><span class="line">	<span class="keyword">long</span> <span class="keyword">long</span> tot = <span class="number">0</span>;</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">1</span>;i &lt;= n;i++)</span><br><span class="line">	&#123;</span><br><span class="line">		tot += (<span class="keyword">long</span> <span class="keyword">long</span>)a[i];</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"%lld\n"</span>,tot*<span class="number">2</span>+<span class="number">1</span>);</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
 <h2 id="欧拉定理"><a href="#欧拉定理" class="headerlink" title="欧拉定理"></a>欧拉定理</h2><h3 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h3><p>​    设$m$为大于 $1$ 的正整数，$a$是与$m$互素的任一整数，则</p>
-<script type="math/tex; mode=display">a^{\varphi(m)}\equiv1(mod\ m)</script><h3 id="证明-2"><a href="#证明-2" class="headerlink" title="证明"></a>证明</h3><ul>
+<p>$$ a^{\varphi(m)}\equiv1(mod\ m)$$</p>
+<h3 id="证明-2"><a href="#证明-2" class="headerlink" title="证明"></a>证明</h3><ul>
 <li><p>把不超过$m$且与$m$互质的正整数拿出来构成集合 ${x_1,x_2,…,x_{φ(m)}}$</p>
 </li>
 <li><p>设$a$与$m$互质，易证集合${ax_1,ax_2,…,ax_{φ(m)}}$在模$m$意义下与前一集合相等</p>
 </li>
 <li><p>将集合内所有原数相乘，得到</p>
-<script type="math/tex; mode=display">ax_1\times ax_2\times…\times ax_{\varphi(m)} \equiv a^{\varphi(m)}  \displaystyle\prod_{i=1}^{\varphi(m)}x_i \equiv\prod_{i=1}^{\varphi(m)}x_i (mod\ m)</script></li>
+<p>$$ ax_1\times ax_2\times…\times ax_{\varphi(m)} \equiv a^{\varphi(m)}  \displaystyle\prod_{i=1}^{\varphi(m)}x_i \equiv\prod_{i=1}^{\varphi(m)}x_i (mod\ m)$$</p>
+</li>
 <li><p>整理得</p>
-<script type="math/tex; mode=display">m|(a^{\varphi(m)}-1)\displaystyle\prod_{i=1}^{\varphi(m)}x_i</script></li>
+<p>$$m|(a^{\varphi(m)}-1)\displaystyle\prod_{i=1}^{\varphi(m)}x_i $$</p>
+</li>
 <li><p>因为 $\displaystyle \prod_{i=1}^{\varphi(m)}x_i$ 与$ m$ 互质，所以$m|a^{\varphi(m)}-1$</p>
 </li>
 <li><p>即$ a^{\varphi(m)}\equiv 1(mod\ m)$</p>
@@ -562,8 +573,9 @@
 <p><img src="https://i.loli.net/2019/07/21/5d3458c7878c098961.jpg" alt></p>
 <p>其中$a$，$p$可以不互质</p>
 <h4 id="证明-3"><a href="#证明-3" class="headerlink" title="证明"></a>证明</h4><h5 id="前置技能"><a href="#前置技能" class="headerlink" title="前置技能"></a>前置技能</h5><p>​    $\varphi(n)$为积性函数，其证明想一想就能写出来</p>
-<h5 id="引理1"><a href="#引理1" class="headerlink" title="引理1"></a>引理1</h5><p>当存在<script type="math/tex">x\equiv y \pmod {m_1}</script></p>
-<script type="math/tex; mode=display">x\equiv y \pmod {m_2}</script><p>则有<script type="math/tex">x\equiv y\pmod {lcm(m_1,m_2)}</script></p>
+<h5 id="引理1"><a href="#引理1" class="headerlink" title="引理1"></a>引理1</h5><p>当存在$$x\equiv y \pmod {m_1}$$</p>
+<p>$$ x\equiv y \pmod {m_2}$$</p>
+<p>则有$$x\equiv y\pmod {lcm(m_1,m_2)}$$</p>
 <h6 id="证明-4"><a href="#证明-4" class="headerlink" title="证明"></a>证明</h6><p>设$x = y+a_1m_1 = y+a_2m_2$</p>
 <p>所以$a_1m_1 = a_2m_2$</p>
 <p>很显然这个是$lcm(m_1,m_2)$的倍数</p>
@@ -571,10 +583,10 @@
 <h6 id="推论"><a href="#推论" class="headerlink" title="推论"></a>推论</h6><ol>
 <li><p>当$gcd(m_1,m_2) = 1$时，$x\equiv y\pmod {m_1m_2}$</p>
 </li>
-<li><p>$\begin{cases}\ x\equiv y\pmod{m_1} \\\ x\equiv y\pmod{m_2} \\\ \cdots\\\ x\equiv y\pmod {m_n}\end{cases}\Rightarrow x\equiv y\pmod{lcm(m_1,m_2,\ldots,m_n)}$</p>
+<li><p>$\begin{cases}\ x\equiv y\pmod{m_1} \\ x\equiv y\pmod{m_2} \\ \cdots\\ x\equiv y\pmod {m_n}\end{cases}\Rightarrow x\equiv y\pmod{lcm(m_1,m_2,\ldots,m_n)}$</p>
 </li>
 <li><p>当$gcd(m_1,m_2,..,m_n)=1$时：</p>
-<p>$\begin{cases}\ x\equiv y\pmod{m_1} \\\ x\equiv y \pmod{m_2} \\\ \cdots\\\ x\equiv y\pmod {m_n}\end{cases}\Rightarrow x\equiv y\pmod{m_1m_2\cdots m_n}$</p>
+<p>$\begin{cases}\ x\equiv y\pmod{m_1} \\ x\equiv y \pmod{m_2} \\ \cdots\\ x\equiv y\pmod {m_n}\end{cases}\Rightarrow x\equiv y\pmod{m_1m_2\cdots m_n}$</p>
 </li>
 </ol>
 <h5 id="引理2"><a href="#引理2" class="headerlink" title="引理2"></a>引理2</h5><p>$p$为素数，$q$为大于$1$的正整数，有$\varphi(p^q) = p^q-p^{q-1}$</p>
@@ -601,6 +613,7 @@
 <li>$b&lt;=\varphi(m)$时则可以直接使用快速幂</li>
 </ul>
 <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> ll long long</span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line">ll a,m,b;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">inline</span> ll <span class="title">read</span><span class="params">(ll m)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">register</span> ll x=<span class="number">0</span>,f=<span class="number">0</span>;<span class="keyword">char</span> ch=getchar();</span><br><span class="line">    <span class="keyword">while</span>(!<span class="built_in">isdigit</span>(ch)) ch=getchar();</span><br><span class="line">    <span class="keyword">while</span>(<span class="built_in">isdigit</span>(ch))</span><br><span class="line">    &#123;</span><br><span class="line">        x=x*<span class="number">10</span>+ch-<span class="string">'0'</span>;</span><br><span class="line">        <span class="keyword">if</span>(x&gt;=m) f=<span class="number">1</span>;</span><br><span class="line">        x%=m;ch=getchar();</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> x+(f==<span class="number">1</span>?m:<span class="number">0</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function">ll <span class="title">phi</span><span class="params">(ll n)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    ll ans=n,m=<span class="built_in">sqrt</span>(n);</span><br><span class="line">    <span class="keyword">for</span>(ll i=<span class="number">2</span>;i&lt;=m;i++)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">if</span>(n%i==<span class="number">0</span>)</span><br><span class="line">        &#123;</span><br><span class="line">            ans=ans/i*(i<span class="number">-1</span>);</span><br><span class="line">            <span class="keyword">while</span>(n%i==<span class="number">0</span>) n/=i; </span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">if</span>(n&gt;<span class="number">1</span>) ans=ans/n*(n<span class="number">-1</span>);</span><br><span class="line">    <span class="keyword">return</span> ans;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function">ll <span class="title">power</span><span class="params">(ll a,ll b,ll p)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    ll ret=<span class="number">1</span>;</span><br><span class="line">    <span class="keyword">for</span>(;b;b&gt;&gt;=<span class="number">1</span>,a=a*a%p)</span><br><span class="line">        <span class="keyword">if</span>(b&amp;<span class="number">1</span>) ret=ret*a%p;</span><br><span class="line">    <span class="keyword">return</span> ret;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">"%lld%lld"</span>,&amp;a,&amp;m);</span><br><span class="line">    b=read(phi(m));</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"%lld\n"</span>,power(a,b,m));</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
 <h3 id="例题-1"><a href="#例题-1" class="headerlink" title="例题"></a>例题</h3><p>链接： <a href="https://www.luogu.org/problemnew/show/P4139" target="_blank" rel="noopener">P4139 上帝与集合的正确用法</a></p>
 <p>解法:</p>
 <ul>
@@ -608,12 +621,16 @@
 </ul>
 <p>边界条件为$\varphi(1) = 0$</p>
 <h2 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h2><ol>
-<li><a href="https://blog.bill.moe/euler-theorem-notes/" target="_blank" rel="noopener">Bill Yang’s Blog</a></li>
+<li><p><a href="https://blog.bill.moe/euler-theorem-notes/" target="_blank" rel="noopener">Bill Yang’s Blog</a></p>
+</li>
 <li><p><a href="https://www.luogu.org/blog/Morning-Glory/ou-la-ji-lie-yang-xi-zheng-ming-post" target="_blank" rel="noopener">Morning_Glory 的玄学园</a></p>
 </li>
 <li><p><a href="https://zhuanlan.zhihu.com/p/24902174" target="_blank" rel="noopener">微小的欧拉定理EXT证明 - <a href="https://www.zhihu.com/people/zhang-qing-chuan" target="_blank" rel="noopener">后缀自动机·张</a></a></p>
 </li>
-<li><a href="https://blog.csdn.net/ez_yww/article/details/76176970" target="_blank" rel="noopener">拓展欧拉定理 - ez_yww</a></li>
+<li><p><a href="https://blog.csdn.net/ez_yww/article/details/76176970" target="_blank" rel="noopener">拓展欧拉定理 - ez_yww</a></p>
+</li>
+<li><p>洛谷网校2019春令营基础数学PPT</p>
+</li>
 </ol>
 
       
