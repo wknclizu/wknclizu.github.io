@@ -117,12 +117,12 @@
 <meta property="og:site_name" content="wknclizu的博客">
 <meta property="og:description" content="一个多项式$$A(x) = \displaystyle\sum_{i=1}^{n-1} = a_0+a_1x+a_2x^2+\dots +a_{n-1}x^{n-1}$$">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="https://cdn.luogu.com.cn/upload/pic/29484.png">
-<meta property="og:updated_time" content="2019-10-20T00:52:46.201Z">
+<meta property="og:image" content="https://i.loli.net/2019/12/14/rOM8oKIjLgVwsS4.png">
+<meta property="og:updated_time" content="2019-12-13T18:48:27.098Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="FFT笔记">
 <meta name="twitter:description" content="一个多项式$$A(x) = \displaystyle\sum_{i=1}^{n-1} = a_0+a_1x+a_2x^2+\dots +a_{n-1}x^{n-1}$$">
-<meta name="twitter:image" content="https://cdn.luogu.com.cn/upload/pic/29484.png">
+<meta name="twitter:image" content="https://i.loli.net/2019/12/14/rOM8oKIjLgVwsS4.png">
 
 
 
@@ -205,7 +205,7 @@
     </div>
     
       
-        <p class="site-subtitle">盼君勿忘</p>
+        <p class="site-subtitle">追逐影子的人，自己就是影子</p>
       
     
     
@@ -512,10 +512,10 @@
 <p><strong>相加时遵循平行四边形法则</strong></p>
 <p> *<em>复数相乘时，模长相乘，幅角相加。 *</em></p>
 <h4 id="单位根"><a href="#单位根" class="headerlink" title="单位根"></a>单位根</h4><p>就是方程$x^n =1$的复数解（图片来自<a href="https://www.luogu.org/blog/command-block/fft-xue-xi-bi-ji" target="_blank" rel="noopener">command_block</a></p>
-<p> 在复平面上，以原点为圆心，$1$为半径作圆，所得的圆叫做单位圆。以原点为起点，单位圆的$n$等分点为终点，作$n$个向量。设所得的<strong>幅角为正且最小</strong>的向量对应的复数为$w_n$，称为$n$次单位根。 </p>
-<p><img src="https://cdn.luogu.com.cn/upload/pic/29484.png" alt="img"></p>
+<p> 在复平面上，以原点为圆心，$1$为半径作圆，所得的圆叫做单位圆。以原点为起点，单位圆的$n$等分点为终点，作$n$个向量。设所得的<strong>幅角为正且最小</strong>的向量对应的复数为$w_n$，称为$n$次单位根。</p>
+<p> <img src="https://i.loli.net/2019/12/14/rOM8oKIjLgVwsS4.png" alt="29484.png"></p>
 <p>所以$w_n^k = cos\ k\frac{2\pi}{n}+i\ sin\ k\frac{2\pi}{n}$</p>
-<p>其余一些性质可以参考<strong>参考资料</strong>，还是加上吧证明就不写了</p>
+<p>其余一些性质可以参考<strong>参考资料</strong>，还是加上吧证明就不写了 </p>
 <ol>
 <li>$\omega _{n}^{k}=\cos k\dfrac{2\pi}{n}+i\sin k\dfrac {2\pi }{n}$</li>
 <li>$\omega _{2n}^{2k}=\omega _{n}^{k}$</li>
@@ -534,7 +534,7 @@
 <p>$$A(w_n^k) = A_1(w_n^{2k})+w_n^kA_2(w_n^{2k}) = A_1(w_{n/2}^{k})+w_n^kA_2(w_{n/2}^{k})$$</p>
 </li>
 <li><p>对于$A(w_n^{k+n/2})$</p>
-<p>$$\begin{aligned} A(\omega_n^{k+\frac n2})&amp;=A_1(\omega_n^{2k+n})+\omega_n^{k+\frac n2}A_2(\omega_n^{2k+n}) \ &amp;=A_1(\omega_n^{2k}\times\omega_n^n)-\omega_n^kA_2(\omega_n^{2k}\times\omega_n^n) \ &amp;=A_1(\omega_n^{2k})-\omega_n^kA_2(\omega_n^{2k}) \ &amp;=A_1(\omega_{\frac{n}{2}}^k)-\omega_n^kA_2(\omega_{\frac n2}^k) \ \end{aligned}$$</p>
+<p>$$\begin{aligned} A(\omega_n^{k+\frac n2}) &amp;=A_1(\omega_n^{2k+n})+\omega_n^{k+\frac n2}A_2(\omega_n^{2k+n}) \\ &amp;=A_1(\omega_n^{2k}\times\omega_n^n)-\omega_n^kA_2(\omega_n^{2k}\times\omega_n^n) \\  &amp;=A_1(\omega_n^{2k})-\omega_n^kA_2(\omega_n^{2k}) \\ &amp;=A_1(\omega_{\frac{n}{2}}^k)-\omega_n^kA_2(\omega_{\frac n2}^k) \ \end{aligned}$$</p>
 </li>
 </ul>
 <p>本处利用了单位根的消去引理与折半引理。</p>
@@ -545,7 +545,7 @@
 <p>总结一下</p>
 <p>FFT分治的过程就是根据</p>
 <p>$$A(\omega_n^k) = A_1(\omega_{n/2}^k)+\omega_n^kA_2(\omega_{n/2}^{k})$$</p>
-<p>$$A(\omega_n^{k+n/2}) = A_1(\omega_{n/2}^k)-\omega <em>n^kA_2(\omega</em>{n/2}^k)$$</p>
+<p>$$A(\omega_n^{k+n/2}) = A_1(\omega_{n/2}^k)-\omega_n^k A_2(\omega_{n/2}^k)$$</p>
 <p>实现了子问题的合并</p>
 <p>还记得一开始说的$n$是$2$的正整数次幂吗，这样就可以保证不会出现分得不均匀的情况，但在实际中$n$不一定是$2$得正整数次幂，对于这种情况我们可以在最高次强行加一些系数为$0$的项，具体细节看代码吧。。。</p>
 <p>首先是关于复数的加减，可以用结构体封装一下，<strong>以下代码皆来自<a href="https://www.luogu.org/blog/command-block/fft-xue-xi-bi-ji" target="_blank" rel="noopener">command-block</a></strong>，<del>因为我太懒了</del></p>
@@ -560,7 +560,7 @@
 <p>$$c_k=\displaystyle\sum_{i=0}^{n-1}y_i(\omega_n^{-k})^i$$</p>
 <p>即多项式$B(x)=y_0+y_1x+y_2x^2+\cdots+y_{n-1}x^{n-1}$为在$\omega_n^0,\omega_n^{-1},\omega_n^{-2},\ldots,\omega_n^{-(n-1)}$处的点值表示。</p>
 <p>将上式展开，得：</p>
-<p>$$\begin{aligned} c_k&amp;=\sum_{i=0}^{n-1}y_i(\omega_n^{-k})^i \ &amp;=\sum_{i=0}^{n-1}(\sum_{j=0}^{n-1}a_j(\omega_n^i)^j)(\omega_n^{-k})^i \ &amp;=\sum_{i=0}^{n-1}(\sum_{j=0}^{n-1}a_j(\omega_n^j)^i)(\omega_n^{-k})^i \ &amp;=\sum_{i=0}^{n-1}(\sum_{j=0}^{n-1}a_j(\omega_n^j)^i(\omega_n^{-k})^i) \ &amp;=\sum_{i=0}^{n-1}\sum_{j=0}^{n-1}a_j(\omega_n^{j-k})^i \ &amp;=\sum_{j=0}^{n-1}a_j(\sum_{i=0}^{n-1}(\omega_n^{j-k})^i) \end{aligned}$$</p>
+<p>$$\begin{aligned} c_k&amp;=\sum_{i=0}^{n-1}y_i(\omega_n^{-k})^i \\ &amp;=\sum_{i=0}^{n-1}(\sum_{j=0}^{n-1}a_j(\omega_n^i)^j)(\omega_n^{-k})^i \\ &amp;=\sum_{i=0}^{n-1}(\sum_{j=0}^{n-1}a_j(\omega_n^j)^i)(\omega_n^{-k})^i \\ &amp;=\sum_{i=0}^{n-1}(\sum_{j=0}^{n-1}a_j(\omega_n^j)^i(\omega_n^{-k})^i) \\ &amp;=\sum_{i=0}^{n-1}\sum_{j=0}^{n-1}a_j(\omega_n^{j-k})^i \\ &amp;=\sum_{j=0}^{n-1}a_j(\sum_{i=0}^{n-1}(\omega_n^{j-k})^i) \end{aligned}$$</p>
 <ul>
 <li><p>以下是$Menci$的推导：</p>
 <p>根据单位根的求和引理，我们可知$\sum\limits_{i=0}^{n-1}(\omega_n^{j-k})^i$在$j\neq k$时为0，但总有一次且仅有一次会出现$j=k$，当$j=k$时$\sum\limits_{i=0}^{n-1}(\omega_n^0)^i=n$.</p>
@@ -632,8 +632,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/10/07/刷题记录/" rel="next" title="刷题记录">
-                <i class="fa fa-chevron-left"></i> 刷题记录
+              <a href="/2019/08/03/编译器/" rel="next" title="编译器">
+                <i class="fa fa-chevron-left"></i> 编译器
               </a>
             
           </div>
@@ -715,7 +715,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">14</span>
+                    <span class="site-state-item-count">6</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
@@ -740,17 +740,7 @@
                     
                       
                     
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                    <span class="site-state-item-count">9</span>
+                    <span class="site-state-item-count">4</span>
                     <span class="site-state-item-name">分类</span>
                   </a>
                 </div>
@@ -771,11 +761,7 @@
                     
                       
                     
-                      
-                    
-                      
-                    
-                    <span class="site-state-item-count">4</span>
+                    <span class="site-state-item-count">2</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
                 </div>
