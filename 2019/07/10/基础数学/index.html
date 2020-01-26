@@ -109,19 +109,19 @@
 
 
 
-  <meta name="description" content="取模运算 (a+b) % m = (a % m+b % m) % m  减法同理 (a  b)% = (a%m)(b%m)%m ​ 这一定理非常重要">
+  <meta name="description" content="取模运算 (a+b) % m = (a % m+b % m) % m  减法同理 (a * b)% = (a%m)*(b%m)%m ​ 这一定理非常重要">
 <meta name="keywords" content="笔记">
 <meta property="og:type" content="article">
 <meta property="og:title" content="基础数学">
 <meta property="og:url" content="https://wknclizu.github.io/2019/07/10/基础数学/index.html">
 <meta property="og:site_name" content="wknclizu的博客">
-<meta property="og:description" content="取模运算 (a+b) % m = (a % m+b % m) % m  减法同理 (a  b)% = (a%m)(b%m)%m ​ 这一定理非常重要">
+<meta property="og:description" content="取模运算 (a+b) % m = (a % m+b % m) % m  减法同理 (a * b)% = (a%m)*(b%m)%m ​ 这一定理非常重要">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="https://i.loli.net/2019/07/15/5d2c97a5a653c95001.jpg">
 <meta property="og:updated_time" content="2019-10-19T12:52:11.045Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="基础数学">
-<meta name="twitter:description" content="取模运算 (a+b) % m = (a % m+b % m) % m  减法同理 (a  b)% = (a%m)(b%m)%m ​ 这一定理非常重要">
+<meta name="twitter:description" content="取模运算 (a+b) % m = (a % m+b % m) % m  减法同理 (a * b)% = (a%m)*(b%m)%m ​ 这一定理非常重要">
 <meta name="twitter:image" content="https://i.loli.net/2019/07/15/5d2c97a5a653c95001.jpg">
 
 
@@ -203,10 +203,6 @@
         <span class="logo-line-after"><i></i></span>
       </a>
     </div>
-    
-      
-        <p class="site-subtitle">追逐影子的人，自己就是影子</p>
-      
     
     
   </div>
@@ -499,11 +495,12 @@
       
         <h2 id="取模运算"><a href="#取模运算" class="headerlink" title="取模运算"></a>取模运算</h2><ol>
 <li><p>(a+b) % m = (a % m+b % m) % m  减法同理</p>
-<p>(a <em> b)% = (a%m)</em>(b%m)%m ​</p>
+<p>(a * b)% = (a%m)*(b%m)%m ​</p>
 <p><strong>这一定理非常重要</strong></p>
 </li>
 </ol>
 <a id="more"></a>
+
 <h3 id="例题"><a href="#例题" class="headerlink" title="例题"></a>例题</h3><p>​    <a href="https://www.luogu.org/problemnew/show/P4942" target="_blank" rel="noopener">洛谷P4942</a></p>
 <ul>
 <li><p>由于某些原因$ (10^n \equiv 1^n \equiv 1 (mod\ 9))$  </p>
@@ -511,12 +508,14 @@
 <li><p>所以$ \frac{(l+r)(r-l+1)}{2}$ 与那个数同余</p>
 </li>
 <li><p>所以。。。</p>
-<p><script type="math/tex">d = ax +by = a(x+ \frac bd*u)+b(y- \frac ad *u)</script>     （u为整数）</p>
+<p>$$ d = ax +by = a(x+ \frac bd*u)+b(y- \frac ad *u)$$     （u为整数）</p>
 </li>
 </ul>
 <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> ll long long</span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"></span><br><span class="line">ll l,r,q,ans;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">"%lld"</span>,&amp;q);</span><br><span class="line">    <span class="keyword">while</span>(q--)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="built_in">scanf</span>(<span class="string">"%lld%lld"</span>,&amp;l,&amp;r);</span><br><span class="line">        ans = l+r&amp;<span class="number">1</span>?(r - l + <span class="number">1</span>) / <span class="number">2</span> % <span class="number">9</span> * (l + r) % <span class="number">9</span> : (l + r) / <span class="number">2</span> % <span class="number">9</span> * (r - l + <span class="number">1</span>) % <span class="number">9</span>;</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">"%lld\n"</span>,ans);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
 <h2 id="筛法"><a href="#筛法" class="headerlink" title="筛法"></a>筛法</h2><h3 id="Eratosthenes筛"><a href="#Eratosthenes筛" class="headerlink" title="Eratosthenes筛"></a>Eratosthenes筛</h3><p>这个东西没有什么技术含量直接上代码吧</p>
 <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="comment">//突然不想写</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
 <h3 id="线性筛"><a href="#线性筛" class="headerlink" title="线性筛"></a>线性筛</h3><p>复杂度：$ O(n) $</p>
 <ol>
 <li><p>线性筛中，每个数只会被它最小的质因子筛去<strong>（这也是它的线性复杂度证明的关键）</strong></p>
@@ -530,14 +529,15 @@
 </li>
 </ol>
 <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> maxn 1000010</span></span><br><span class="line"><span class="keyword">int</span> pri[maxn], vis[maxn], tot;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">Euler_Sieve</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">2</span>; i &lt; maxn; i++)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="keyword">if</span> (!vis[i])</span><br><span class="line">			pri[tot++] = i;</span><br><span class="line">		<span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">0</span>; j &lt; tot &amp;&amp; pri[j] * i &lt; maxn; j++)</span><br><span class="line">		&#123;</span><br><span class="line">			vis[pri[j] * i] = <span class="number">1</span>;</span><br><span class="line">			<span class="keyword">if</span> (i % pri[j] == <span class="number">0</span>)</span><br><span class="line">				<span class="keyword">break</span>;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	Euler_Sieve();</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; tot; i++)</span><br><span class="line">		<span class="built_in">printf</span>(<span class="string">"%d "</span>, pri[i]);</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
 <h2 id="欧几里得拓展"><a href="#欧几里得拓展" class="headerlink" title="欧几里得拓展"></a>欧几里得拓展</h2><p><strong>一个不定方程：$ ax+by = (a,b)$</strong></p>
 <p>它的性质是对于整数$ a,b$ ，必有<strong>无穷组</strong>整数$x,y$满足这个方程</p>
 <p>所以。。。</p>
-<p><script type="math/tex">d = ax +by = a(x+ \frac bd*u)+b(y- \frac ad *u)</script>     （u为整数）</p>
-<p>相信大家都知道辗转相除法(求最大公约数)的原理是：$ gcd(a,b) = gcd(a+bx,b) = gcd(a \% b,b) $</p>
+<p>$$ d = ax +by = a(x+ \frac bd*u)+b(y- \frac ad *u)$$     （u为整数）</p>
+<p>相信大家都知道辗转相除法(求最大公约数)的原理是：$ gcd(a,b) = gcd(a+bx,b) = gcd(a % b,b) $</p>
 <blockquote>
 <p>辗转相除法， 又名欧几里德算法（Euclidean algorithm），是求最大公约数的一种方法。它的具体做法是：用较大数除以较小数，再用出现的余数（第一余数）去除除数，再用出现的余数（第二余数）去除第一余数，如此反复，直到最后余数是0为止。如果是求两个数的最大公约数，那么最后的除数就是这两个数的最大公约数。</p>
-<p>​                                                                                                    —from 百度<del>（虽然我也不想用）</del></p>
+<p>​                                                                                                    –from 百度<del>（虽然我也不想用）</del></p>
 </blockquote>
 <p><img src="https://i.loli.net/2019/07/15/5d2c97a5a653c95001.jpg" alt="图片好像挂掉了"></p>
 <p><strong>其他的还有很多，以后会慢慢补坑的</strong></p>
@@ -666,7 +666,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">6</span>
+                    <span class="site-state-item-count">7</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
@@ -691,7 +691,9 @@
                     
                       
                     
-                    <span class="site-state-item-count">4</span>
+                      
+                    
+                    <span class="site-state-item-count">5</span>
                     <span class="site-state-item-name">分类</span>
                   </a>
                 </div>
@@ -712,7 +714,9 @@
                     
                       
                     
-                    <span class="site-state-item-count">2</span>
+                      
+                    
+                    <span class="site-state-item-count">3</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
                 </div>
@@ -831,7 +835,7 @@
 
     <footer id="footer" class="footer">
       <div class="footer-inner">
-        <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2020</span>
   <span class="with-love" id="animate">
     <i class="fa fa-docker"></i>
   </span>
