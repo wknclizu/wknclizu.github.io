@@ -1755,7 +1755,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #b6dd8b;
+  background: #ffd;
 }
 .feed-link,
 .chat {
@@ -3018,4 +3018,14 @@ body {
   float: right;
   font-family: "Microsoft YaHei";
   font-size: 12px;
+}
+.hider_title {
+  font-family: "Microsoft Yahei";
+  cursor: pointer;
+}
+.close:after {
+  content: "▼";
+}
+.open:after {
+  content: "▲";
 }
