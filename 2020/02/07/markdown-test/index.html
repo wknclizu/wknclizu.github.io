@@ -109,18 +109,18 @@
 
 
 
-  <meta name="description" content="如标题，这是一篇测试文档，顺便说一句，hexo的mathjax怎么这么** $ [c*(f(x)]’ = c\times f’(x) \\ (2\ln_x)’ = \frac 2{x}$ $f(x) = \log_a^x ,f(x)’ = \frac 1{x\ln a}$$$\begin{array}{ll} 1 &amp;amp; \textbf{Input. } \text{The edges of">
+  <meta name="description" content="如标题，这是一篇测试文档，顺便说一句，hexo的mathjax怎么这么** $ [c*(f(x)]’ = c\times f’(x) \\\ (2\ln_x)’ = \frac 2{x}$ $f(x) = \log_a^x ,f(x)’ = \frac 1{x\ln a}$  \begin{array}{ll}  1 &amp; \textbf{Input. } \text{The edges of th">
 <meta property="og:type" content="article">
 <meta property="og:title" content="markdown_test">
 <meta property="og:url" content="https://wknclizu.github.io/2020/02/07/markdown-test/index.html">
 <meta property="og:site_name" content="wknclizu的博客">
-<meta property="og:description" content="如标题，这是一篇测试文档，顺便说一句，hexo的mathjax怎么这么** $ [c*(f(x)]’ = c\times f’(x) \\ (2\ln_x)’ = \frac 2{x}$ $f(x) = \log_a^x ,f(x)’ = \frac 1{x\ln a}$$$\begin{array}{ll} 1 &amp;amp; \textbf{Input. } \text{The edges of">
+<meta property="og:description" content="如标题，这是一篇测试文档，顺便说一句，hexo的mathjax怎么这么** $ [c*(f(x)]’ = c\times f’(x) \\\ (2\ln_x)’ = \frac 2{x}$ $f(x) = \log_a^x ,f(x)’ = \frac 1{x\ln a}$  \begin{array}{ll}  1 &amp; \textbf{Input. } \text{The edges of th">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="https://i.loli.net/2020/02/11/uTC691pFZg8GlLe.jpg">
 <meta property="og:updated_time" content="2020-02-13T02:53:21.821Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="markdown_test">
-<meta name="twitter:description" content="如标题，这是一篇测试文档，顺便说一句，hexo的mathjax怎么这么** $ [c*(f(x)]’ = c\times f’(x) \\ (2\ln_x)’ = \frac 2{x}$ $f(x) = \log_a^x ,f(x)’ = \frac 1{x\ln a}$$$\begin{array}{ll} 1 &amp;amp; \textbf{Input. } \text{The edges of">
+<meta name="twitter:description" content="如标题，这是一篇测试文档，顺便说一句，hexo的mathjax怎么这么** $ [c*(f(x)]’ = c\times f’(x) \\\ (2\ln_x)’ = \frac 2{x}$ $f(x) = \log_a^x ,f(x)’ = \frac 1{x\ln a}$  \begin{array}{ll}  1 &amp; \textbf{Input. } \text{The edges of th">
 <meta name="twitter:image" content="https://i.loli.net/2020/02/11/uTC691pFZg8GlLe.jpg">
 
 
@@ -475,22 +475,39 @@
 
       
         <p>如标题，这是一篇测试文档，顺便说一句，hexo的mathjax怎么这么**</p>
-<p>$ [c*(f(x)]’ = c\times f’(x) \\ (2\ln_x)’ = \frac 2{x}$</p>
-<p>$f(x) = \log_a^x ,f(x)’ = \frac 1{x\ln a}$<br>$$<br>\begin{array}{ll}</p>
-<p>1 &amp; \textbf{Input. } \text{The edges of the graph } e , \text{ where each element in } e \text{ is } (u, v, w) \</p>
-<p> &amp; \text{ denoting that there is an edge between } u \text{ and } v \text{ weighted } w . \</p>
-<p>2 &amp; \textbf{Output. } \text{The edges of the MST of the input graph}.\</p>
-<p>3 &amp; \textbf{Method. } \ </p>
-<p>4 &amp; result \gets \varnothing \</p>
-<p>5 &amp; \text{sort } e \text{ into nondecreasing order by weight } w \ </p>
-<p>6 &amp; \textbf{for} \text{ each } (u, v, w) \text{ in the sorted } e \ </p>
-<p>7 &amp; \qquad \textbf{if } u \text{ and } v \text{ are not connected in the union-find set } \</p>
-<p>8 &amp; \qquad\qquad \text{connect } u \text{ and } v \text{ in the union-find set} \</p>
-<p>9 &amp; \qquad\qquad result \gets result;\bigcup\ {(u, v, w)} \</p>
-<p>10 &amp; \textbf{return } result</p>
-<p>\end{array}<br>$$</p>
-<p>$$<br>\begin{cases}<br>x\equiv m \pmod{n}\<br>x\equiv m \pmod{p}\<br>n\le p<br>\end{cases}\Rightarrow n|p<br>$$</p>
-<p>渲染出来本应该是这个效果的</p>
+<p>$ [c*(f(x)]’ = c\times f’(x) \\\ (2\ln_x)’ = \frac 2{x}$</p>
+<p>$f(x) = \log_a^x ,f(x)’ = \frac 1{x\ln a}$</p>
+<script type="math/tex; mode=display">
+\begin{array}{ll}
+
+1 & \textbf{Input. } \text{The edges of the graph } e , \text{ where each element in } e \text{ is } (u, v, w) \\
+
+ & \text{ denoting that there is an edge between } u \text{ and } v \text{ weighted } w . \\
+
+2 & \textbf{Output. } \text{The edges of the MST of the input graph}.\\
+
+3 & \textbf{Method. } \\ 
+
+4 & result \gets \varnothing \\
+
+5 & \text{sort } e \text{ into nondecreasing order by weight } w \\ 
+
+6 & \textbf{for} \text{ each } (u, v, w) \text{ in the sorted } e \\ 
+
+7 & \qquad \textbf{if } u \text{ and } v \text{ are not connected in the union-find set } \\
+
+8 & \qquad\qquad \text{connect } u \text{ and } v \text{ in the union-find set} \\
+
+9 & \qquad\qquad result \gets result\;\bigcup\ \{(u, v, w)\} \\
+
+10 & \textbf{return } result
+
+\end{array}</script><script type="math/tex; mode=display">
+\begin{cases}
+x\equiv m \pmod{n}\\
+x\equiv m \pmod{p}\\
+n\le p
+\end{cases}\Rightarrow n|p</script><p>渲染出来本应该是这个效果的</p>
 <p><img src="https://i.loli.net/2020/02/11/uTC691pFZg8GlLe.jpg" alt="效果图"></p>
 <div><div class="fold_hider"><div class="close hider_title">代码</div></div><div class="fold">
 <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
@@ -751,7 +768,7 @@
 
     <footer id="footer" class="footer">
       <div class="footer-inner">
-        <div class="copyright">&copy; <span itemprop="copyrightYear">2020</span>
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2021</span>
   <span class="with-love" id="animate">
     <i class="fa fa-docker"></i>
   </span>
